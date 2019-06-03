@@ -1,0 +1,13 @@
+<script type="application/ld+json">
+    {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "url": "{{ .Site.BaseURL | safeHTML }}",
+    "author": {
+        "@type": "Person",
+        "name": "{{ .Site.Params.author }}"
+    },
+    "description": "{{ .Site.Params.description | safeHTML }}",
+    "image": "https://code.luasoftware.com/img/cover.png"
+    }
+</script>

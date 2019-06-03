@@ -1,0 +1,28 @@
+<li class="event__wrapper" itemscope itemtype="http://schema.org/Event">
+    <a class="event__link" href="{{ .Permalink }}">  
+        <meta itemprop="startDate" content="{{ .Params.startdate }}">
+        <meta itemprop="endDate" content="{{ .Params.enddate }}">
+        <meta itemprop="description" content="{{ .Content | safeHTML | truncate 140 }}">
+        <meta itemprop="image" content="{{ .Site.BaseURL}}assets/img/events/{{ .Params.img }}">
+        <time class="event__time" datetime="{{ .Params.startDate }}">{{ .Params.schedule }}</time>
+        <div class="event__venue" itemprop="location" itemscope itemtype="http://schema.org/Place">
+            <span itemprop="name">{{ .Params.place }}</span>
+            <span class="event__address hide" itemprop="address">{{ .Params.address }}</span>
+        </div>
+        <h4 class="event__title" itemprop="name">{{ .Title }}</h4>
+        <ul class="event__speakers">
+            {{ range .Params.speakers }}
+                <li itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                    <img src="/assets/img/speakers/small/{{ .img }}" itemprop="image" alt="Photo de {{ .name }}">
+                    <h5 itemprop="name">{{ .name | safeHTML }}</h5>
+                    <span itemprop="jobTitle">{{ .info }}</span>
+                </li>
+            {{ end }}
+        </ul>
+    </a>
+    <div class="event__tickets__link-wrapper" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+        <meta itemprop="price" content="{{ .Params.price}}">
+        <meta itemprop="priceCurrency" content="EUR">
+        <a class="event__tickets__link button" itemprop="url" href="{{ .Params.link }}">Réserver</a>
+    </div>
+</li>

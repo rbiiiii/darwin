@@ -1,0 +1,34 @@
+h1, h2, h3, h4 {
+    @include ff-b;
+    margin-bottom:0.25em;
+    line-height:1.25;
+    color:$purple;
+}
+
+h1 {
+    font-size:1.4rem;
+    margin-bottom:0.5em;
+}
+
+h2 {
+    font-size:1.2rem;
+	margin-bottom: 1em;
+}
+
+h3 {
+    font-size:1.1rem;
+}
+
+p, ul {
+    margin-bottom:1em;
+    line-height:1.6;
+	font-size: 18px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.text-underline {
+    text-decoration: underline;
+}

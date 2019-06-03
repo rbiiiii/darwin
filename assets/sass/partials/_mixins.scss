@@ -1,0 +1,60 @@
+/*
+* MIXINS
+*/
+
+@mixin gradientBottom {
+    background-image: linear-gradient(to right, $green 0%, $green 50%, $pink 51%, $pink 100%);
+}
+
+@mixin gradientTop {
+    background-image: linear-gradient(to right, 
+    $green 0%,
+    $green 19.999%,
+    $orange-dark 20%,
+    $orange-dark 39.999%,
+    $purple 40%,
+    $purple 59.999%,
+    $orange-light 60%,
+    $orange-light 79.999%,
+    $pink 80%);
+}
+
+@mixin linePos($pos) {
+    @media screen and (min-width:1000px) {
+        &:#{$pos} {
+            width:11%;
+        }
+    }
+
+    @media screen and (min-width:1200px) {
+        &:#{$pos} {
+            width:18%;
+        }
+    }
+
+    @media screen and (min-width:1400px) {
+        &:#{$pos} {
+            width:23%;
+        }
+    }
+
+    @media screen and (min-width:1600px) {
+        &:#{$pos} {
+            width:26%;
+        }
+    }
+
+    @media screen and (min-width:1800px) {
+        &:#{$pos} {
+            width:29%;
+        }
+    }
+}
+
+@mixin ff-r {
+    font-family: "TTCommons","Helvetica Neue",Helvetica,Arial,sans-serif;  
+} 
+
+@mixin ff-b {
+    font-family: "TTCommons-bold","Helvetica Neue",Helvetica,Arial,sans-serif;  
+} 

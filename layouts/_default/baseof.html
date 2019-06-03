@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ $.Site.LanguageCode }}">
+  <head>
+    <link rel="preload" href="/assets/fonts/tt_commons_regular.woff2" as="font" crossorigin type="font/woff2">
+    <link rel="preload" href="/assets/fonts/tt_commons_bold.woff2" as="font" crossorigin type="font/woff2">
+    <meta charset="utf-8">
+    <meta name="language" content="{{ .Site.LanguageCode }}" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <title>{{ block "title" . }}{{ .Site.Title }} {{ with .Params.Title }} | {{ . }}{{ end }}{{ end }}</title>
+    <meta name="author" content='{{ .Site.Params.Author }}' />
+    <meta name="description" content='{{ .Site.Params.Description }}' />
+    <meta property="og:type" content="website" />
+  	<meta property="og:url" content="{{ .Permalink }}" />
+    <meta property="og:title" content="{{ .Site.Title }} {{ with .Params.Title }} | {{ . }}{{ end }}" />
+    <meta property="og:description" content='{{ .Site.Params.Description }}' />
+    <meta property="og:image" content="{{ with .Params.img }}{{ . }}{{ else }}{{ .Site.BaseURL }}assets/img/cal-50-ans-banniere-fb.jpg{{ end }}" />
+    <meta property="og:site_name" content="50 ans de Laïcité" />
+    {{ $style := resources.Get "sass/main.scss" | resources.ToCSS | resources.PostCSS | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" type="text/css" href="{{ $style.Permalink | relURL }}">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/tiny-slider.css"> -->
+    {{ partial "site-favicon.html" . }}
+    {{ partial "page-snippets.html" . }}
+  </head>
+	<body id="root" class="{{ .Params.layout }}">
+    <div class="site-wrapper">
+      {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
+      <main class="site-main">{{ block "main" . }}{{ end }}</main>
+      {{ block "footer" . }}{{ partial "site-footer.html" . }}{{ end }}
+      {{ block "scripts" . }}{{ partial "site-scripts.html" . }}{{ end }}
+    </div>
+  </body>
+</html>

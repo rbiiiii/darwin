@@ -1,0 +1,138 @@
+/*
+* HOMEPAGE
+*/
+
+h1.site-title {
+    display:block;
+    background: url('../assets/img/cal-50-ans-header-small.jpg') no-repeat left top;
+    background-size: cover;
+    background-position: center center;
+    margin: 0;
+    min-height:358px;
+    max-height:620px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (min-width:768px) {
+        height: 100vh;
+        background-image:url('../assets/img/cal-50-ans-header-big.jpg');
+        opacity:0.9;
+    }
+}
+
+@keyframes bg {
+    0% {
+        background-position:40% 60%;
+    }
+    100% {
+        background-position:60% 40%;
+    }
+}
+
+.site-title__timbre {
+    margin:$su*2 0;
+    width:60vw;
+    max-width:220px;
+    transform: rotate(-5deg);
+
+    @media screen and (min-width:768px) {
+        max-width: 320px;
+        box-shadow: 3px 3px 6px 0 rgba(0,0,0,0.25);
+    }
+}
+
+.site-dates {
+    text-align: center;
+    color:$purple;
+    font-size: 200%;
+    line-height: 1.15;  
+
+    span {
+        display:block;
+
+        &.site-dates__where {
+            font-size: 273%;
+            line-height: 1;
+        }
+
+        &.site-dates__days {
+            line-height: 1.1;
+        }
+
+        &.site-dates__month {
+            font-size: 112%;
+        }
+    }
+}
+
+.home-intro {
+    max-width:$tw;
+    margin:$su*2 auto;
+    padding:0 $su;
+
+    .light-bg {
+        background-color:$bg-color-light;
+        padding:1em;
+        border-radius:20px;
+    }
+
+    p {
+        font-size: 1.2rem;
+        line-height:1.35;
+
+        &:first-of-type {
+            margin-top:0;
+        }
+
+        &:last-of-type {
+            margin-bottom:0;
+        }
+    }
+}
+
+.home-agenda {
+    margin:$su*8 auto $su*4 auto; 
+    padding:0 $su;
+
+    h2 {
+        text-transform: uppercase;
+        text-align: center;
+        font-size:2rem;
+    }
+
+    .home-agenda__day__wrapper {
+        position:relative;
+        width:100%;
+        display:flex;
+        justify-content: center;
+        z-index:1;
+        margin-bottom:$su*4;
+
+        &:before {
+            content:"";
+            position: absolute;
+            height:3px;
+            width:100%;
+            left:0;
+            right:0;
+            top:15px;
+            background-color:$green;
+        }
+    }
+
+    .home-agenda__day__title {
+        text-transform: uppercase;
+        font-size:1.6rem;
+        display: inline-block;
+        display:block;
+        margin:0 auto;
+        background-color:$bg-color;
+        z-index:2;
+        padding:0 $su/2;
+
+        .ie & {
+            margin-left:0;
+        }
+    }
+}

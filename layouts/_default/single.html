@@ -1,0 +1,58 @@
+{{ define "main" }}
+<article class="single" itemscope itemtype="http://schema.org/Event">
+    <header class="single__header">
+        <h1 class="event__title" itemprop="name">{{ .Title }}</h1>
+    </header>
+    <div class="single__main">
+        <h2 class="single__main__subtitle">Intervenants</h2>
+        <ul class="event__speakers">
+            {{ range .Params.speakers }}
+            <li itemprop="performer" itemscope itemtype="http://schema.org/Person">
+                <img src="/assets/img/speakers/small/{{ .img }}" itemprop="image" alt="Photo de {{ .name }}">
+                <h5 itemprop="name">{{ .name | safeHTML }}</h5>
+                <span itemprop="jobTitle">{{ .info }}</span>
+            </li>
+            {{ end }}
+        </ul>
+        <div class="single__content">
+            {{ .Content }}
+            <a class="button single__content__back-btn" href="{{ .Site.BaseURL }}#programme">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H6M12 5l-7 7 7 7"/></svg> Programme
+            </a>
+        </div>
+    </div>
+    <aside class="single__aside">
+        <meta itemprop="startDate" content="{{ .Date }}">
+        <meta itemprop="endDate" content="{{ .Params.enddate }}">
+        <meta itemprop="description" content="{{ .Content | safeHTML | truncate 140 }}">
+        <meta itemprop="image" content="{{ .Site.BaseURL}}assets/img/events/{{ .Params.img }}">
+        {{ $weekday := index $.Site.Data.days (printf "%d" .Date.Weekday) }}
+        <time class="event__time" datetime="{{ .Date }}">{{ humanize $weekday }}&nbsp;{{ .Date.Format "2/2" }} - {{ .Params.schedule }}</time>
+        <div class="event__venue" itemprop="location" itemscope itemtype="http://schema.org/Place">
+            <span itemprop="name">{{ .Params.place }}</span>
+            <span class="event__address hide" itemprop="address">{{ .Params.address }}</span>
+        </div>
+        <div class="event__tickets__link-wrapper" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <meta itemprop="priceCurrency" content="EUR">
+            <span itemprop="price">{{ if eq .Params.price 0 }}Gratuit{{ else }}{{ .Params.price }} € {{ end }}</span>
+            <a class="event__tickets__link button" itemprop="url" href="{{ .Params.link }}">Réserver</a>
+        </div>
+        {{ $timbres := $.Site.Data.timbres }}
+        {{ with .Params.cat }}
+            <img class="event__category" src="/assets/img/timbres/50-ans-laicite-{{ . }}.png" alt="{{ $thisCat := . }}{{ range $index, $value := $timbres }}{{ if eq $index $thisCat }}{{ $value }}{{ end }}{{end}}">
+        {{ end }}
+    </aside>
+    <nav class="single__nav">
+        {{ with .PrevInSection }}
+            <a class="button single__nav__prev" href="{{ .Permalink }}" title="Précédent">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H6M12 5l-7 7 7 7"/></svg>
+            </a>
+        {{ end }}
+        {{ with .NextInSection }}
+            <a class="button single__nav__next" href="{{ .Permalink }}" title="Suivant">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+            </a>
+        {{ end }}
+    </nav>
+</article>
+{{ end }}

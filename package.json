@@ -1,0 +1,23 @@
+{
+  "name": "darwin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "postcss.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rbiiiii/darwin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rbiiiii/darwin/issues"
+  },
+  "homepage": "https://github.com/rbiiiii/darwin#readme",
+  "dependencies": {
+    "autoprefixer": "^9.5.1",
+    "postcss-cli": "^6.1.2"
+  }
+}

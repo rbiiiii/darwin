@@ -1,0 +1,51 @@
+/*
+* HEADER
+*/
+
+.site-header {
+    height:$su/2;
+    width:100%;
+    position: relative;
+    
+    @media screen and (min-width:768px) {
+        height:$su*4;
+        @include gradientBottom;
+    }
+}
+
+.site-header__wrapper {
+    max-width: 940px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: 100%;   
+    @include gradientTop;
+    
+
+    @media screen and (min-width:768px) {
+
+        &:before {
+            content:"";
+            width:8%;
+            position:absolute;
+            height:2px;
+            background-color: white;
+            left:0;
+        }
+    }
+
+    @include linePos(before);
+}
+
+.site-header__flambeau {
+    display:none;
+    width:95px;
+    
+    @media screen and (min-width:768px) {
+        display:block;
+        margin-left:9.5vw;
+    }
+    @media screen and (min-width:940px) {
+        margin-left:102px;
+    }
+}
