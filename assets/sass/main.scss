@@ -6,6 +6,8 @@ $purple: #6e5d98;
 $orange-light:#f6bc5e;
 $pink: #e975ab;
 
+$bg-dark: #222d34;
+
 $su: 20px; // spacing-unit
 
 $tw: 740px; // text-width
@@ -36,5 +38,4 @@ $mw: 1120px; // max-width
 @import 'partials/_home';
 @import 'partials/_header';
 @import 'partials/_footer';
-@import 'partials/_single';
 @import 'partials/_modules';

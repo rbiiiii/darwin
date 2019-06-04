@@ -9,7 +9,7 @@ html, body {
     font-size:16px;
     font-weight:400;
     line-height:1.5;
-    background-color:$bg-color-light;
+    background-color:white;
     color:black;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -25,38 +25,8 @@ html, body {
     }
 }
 
-.site-wrapper {
-    background-color:$bg-color;
-    width:100%;
-    max-width:1920px;
-    margin:0 auto;
-    height:100%;
-    box-shadow: 2px 2px 20px -5px #878787;
-}
-
 .block-mw {
     max-width:$mw;
     margin-right:auto;
     margin-left:auto;
-}
-
-.section-blocks {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.section-block {
-    width:100%;
-    margin-top:$su;
-    margin-bottom:$su;
-
-    @media (min-width:600px) {
-        margin-top:$su*2;
-        margin-bottom:$su*2;
-    }
-
-    @media (min-width:960px) {
-        width:50%;
-    }
 }

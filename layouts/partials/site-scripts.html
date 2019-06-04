@@ -2,4 +2,3 @@
 {{ $defaultJS := slice $main | resources.Concat "js/global.js" }}
 {{ $globalJS := $defaultJS | resources.Fingerprint }}
 <script src="{{ $globalJS.Permalink }}"></script>
-<script>console.log('savethedate');</script>
