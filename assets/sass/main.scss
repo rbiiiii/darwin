@@ -1,12 +1,5 @@
-$bg-color: #fbdeb3;
-$bg-color-light: #fde5c1;
-$green: #babf99;
-$orange-dark: #f28b4e;
-$purple: #6e5d98;
-$orange-light:#f6bc5e;
-$pink: #e975ab;
-
 $bg-dark: #222d34;
+$red: #db111d;
 
 $su: 20px; // spacing-unit
 
@@ -14,18 +7,18 @@ $tw: 740px; // text-width
 $mw: 1120px; // max-width
 
 @font-face {
-    font-family: "TTCommons";
-    src:url('../assets/fonts/tt_commons_regular.woff2') format('woff2'),
-        url('../assets/fonts/tt_commons_regular.woff') format('woff');
+    font-family: "ITC";
+    src:url('../assets/fonts/itc_avant_garde_gothic_medium-webfont.woff2') format('woff2'),
+        url('../assets/fonts/itc_avant_garde_gothic_medium-webfont.woff') format('woff');
     unicode-range: 00A0 — 00FF;
     font-weight:400;
     font-display:swap;
 }
 
 @font-face {
-    font-family: "TTCommons-bold";
-    src:url('../assets/fonts/tt_commons_bold.woff2') format('woff2'),
-        url('../assets/fonts/tt_commons_bold.woff') format('woff');
+    font-family: "ITC-bold";
+    src:url('../assets/fonts/ITCAvantGardePro-Bold.woff2') format('woff2'),
+        url('../assets/fonts/ITCAvantGardePro-Bold.woff') format('woff');
     unicode-range: 00A0 — 00FF;
     font-weight: bold;
     font-display:swap;
@@ -35,7 +28,7 @@ $mw: 1120px; // max-width
 @import 'partials/_mixins';
 @import 'partials/_layout';
 @import 'partials/_typo';
-@import 'partials/_home';
+@import 'partials/_main-content';
 @import 'partials/_header';
 @import 'partials/_footer';
 @import 'partials/_modules';

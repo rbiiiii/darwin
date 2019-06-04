@@ -2,7 +2,7 @@ h1, h2, h3, h4 {
     @include ff-b;
     margin-bottom:0.25em;
     line-height:1.25;
-    color:$purple;
+    text-transform: uppercase;
 }
 
 h1 {

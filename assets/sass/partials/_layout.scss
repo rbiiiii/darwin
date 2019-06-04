@@ -1,7 +1,7 @@
 
 ::selection {
 	background-color:white;
-	color:  $purple;
+	color:  $red;
 }
 
 html, body {
@@ -9,8 +9,8 @@ html, body {
     font-size:16px;
     font-weight:400;
     line-height:1.5;
-    background-color:white;
-    color:black;
+    background-color: $bg-dark;
+    color:white;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     min-height:100vh;
