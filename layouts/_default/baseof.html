@@ -22,11 +22,9 @@
     {{ partial "page-snippets.html" . }}
   </head>
 	<body id="root" class="{{ .Params.layout }}">
-    <div class="site-wrapper">
-      {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
-      <main class="site-main">{{ block "main" . }}{{ end }}</main>
-      {{ block "footer" . }}{{ partial "site-footer.html" . }}{{ end }}
-      {{ block "scripts" . }}{{ partial "site-scripts.html" . }}{{ end }}
-    </div>
+    {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
+    <main class="site-main">{{ block "main" . }}{{ end }}</main>
+    {{ block "footer" . }}{{ partial "site-footer.html" . }}{{ end }}
+    {{ block "scripts" . }}{{ partial "site-scripts.html" . }}{{ end }}
   </body>
 </html>

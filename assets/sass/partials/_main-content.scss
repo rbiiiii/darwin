@@ -4,6 +4,20 @@
 
 .site-main {
     width:100%;
-    max-width:1080px;
+    max-width:840px;
     margin:$su*2 auto;
+    padding:0 1.2rem;
+    box-sizing: border-box;
+    
+    @media screen and (min-width:600px) {
+        padding:0 $su*2;        
+    }
+}
+
+.home-section {
+    padding-top:$su*2;
+
+    @media screen and (min-width:768px) {
+        padding-top:$su*4;
+    }
 }

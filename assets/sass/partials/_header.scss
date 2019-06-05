@@ -2,8 +2,92 @@
 * HEADER
 */
 
-.site-nav {
-    border-top:4px solid white;
+
+.site-header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loader-wrapper {
+    position: absolute;
+    top:0;
+    right: 0;
+    bottom:0;
+    left:0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    .content-loaded & {
+        display:none;
+    }
+}
+
+.loader {
+    position: absolute;
+    border: 8px solid whitesmoke;
+    border-top: 8px solid $red;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1.1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.site-header__copy-top {
+    top:$su;
+    max-width:400px;
+    z-index: 5;
+    opacity:0;
+    position:relative;
+    padding: 0 $su;
+    text-align: center;
+    margin: 0 auto $su auto;
+
+    @media screen and (min-width:1080px) {
+        position: absolute;
+        padding:0;
+        margin:0;
+
+        &.left {
+            left:$su;
+        }
+    
+        &.right {
+            right:$su;
+        }
+    }
+
+    .content-loaded & {
+        animation: header-txt ease-out .25s 1s forwards;
+    }
+
+    &__logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+
+        a {
+            transition: opacity .2s ease-out;
+            margin:0 $su/4;
+
+            &:hover, &:focus {
+                opacity:0.8;
+            }
+        }
+    }
+
+    p {
+        font-size: 0.8rem;
+        margin-top:0;
+    }
 }
 
 .site-header__group {
@@ -15,6 +99,11 @@
     display:flex;
     align-items: center;
     justify-content: center;
+    border-bottom:2px solid white;
+
+    @media screen and (min-width:1080px) {
+        border-bottom:0;
+    }
 }
 
 .site-header__bg {
@@ -27,7 +116,10 @@
     left:0;
     transform:scale(0);
     transform-origin: center;
-    animation: header-bg .6s .5s forwards ease-in-out;
+
+    .content-loaded & {
+        animation: header-bg .5s forwards ease-in-out;
+    }
 }
 
 @keyframes header-bg {
@@ -42,7 +134,10 @@
     transform: translateX(-50%);
     height: 100%;
     opacity:0;
-    animation: header-homme .25s 1.1s forwards ease-in-out;
+    
+    .content-loaded & {
+        animation: header-homme .25s .45s forwards ease-in-out;
+    }
 }
 
 @keyframes header-homme {
@@ -57,7 +152,10 @@
     width: 50vh;
     min-width: 320px;
     max-width: 90vw;
-    animation: header-txt .25s 1.35s forwards ease-out;
+
+    .content-loaded & {
+        animation: header-txt .25s .7s forwards ease-out;
+    }
 
     @media screen and (min-width:768px) {
         max-width:600px;
@@ -70,28 +168,20 @@
 }
 
 .site-header__copy-img {
-    margin-top:auto;
-    margin-right:auto;
-    padding-bottom:$su;
-    padding-left:$su;
-}
+    opacity:0;
+    position:relative;
+    margin-top:$su;
 
-.site-nav__list {
-    display: flex;
-    justify-content: center;
-    max-width: 800px;
-    margin: 0 auto;
-}
+    @media screen and (min-width:1080px) {
+        position:absolute;
+        margin:0;
+        transform:rotate(-90deg);
+        transform-origin: left;
+        bottom: 70px;
+        left: 20px
+    }
 
-.site-nav__list__item {
-
-    a {
-        display:block;
-        background-color:$red;
-        color: white;
-        text-decoration: none;
-        padding: 0.5em 0.8em;
-        text-transform: uppercase;
-        font-size:1.4rem
+    .content-loaded & {
+        animation: header-txt .25s 1s forwards ease-out;
     }
 }

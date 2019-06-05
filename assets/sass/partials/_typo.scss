@@ -6,12 +6,12 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    font-size:1.4rem;
+    font-size:2.4rem;
     margin-bottom:0.5em;
 }
 
 h2 {
-    font-size:1.2rem;
+    font-size:1.8rem;
 	margin-bottom: 1em;
 }
 
@@ -26,7 +26,13 @@ p, ul {
 }
 
 ul {
-	list-style-type: none;
+    list-style-type: none;
+    padding-left:0;
+
+    li {
+        line-height:1.4;
+        margin:0.75em 0;
+    }
 }
 
 .text-underline {

@@ -1,5 +1,7 @@
 $bg-dark: #222d34;
+$bg-light: #96c4dc;
 $red: #db111d;
+$red-dark: #a32a31;
 
 $su: 20px; // spacing-unit
 
@@ -28,7 +30,8 @@ $mw: 1120px; // max-width
 @import 'partials/_mixins';
 @import 'partials/_layout';
 @import 'partials/_typo';
-@import 'partials/_main-content';
 @import 'partials/_header';
+@import 'partials/_nav';
 @import 'partials/_footer';
+@import 'partials/_main-content';
 @import 'partials/_modules';
