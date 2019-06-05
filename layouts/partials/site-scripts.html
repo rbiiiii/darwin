@@ -1,7 +1,5 @@
-{{ $main := resources.Get "js/main.js" }}
-{{ $defaultJS := slice $main | resources.Concat "js/global.js" }}
-{{ $globalJS := $defaultJS | resources.Fingerprint }}
-<script src="{{ $globalJS.Permalink }}"></script>
+{{ $main := resources.Get "js/main.js" | resources.Fingerprint }}
+<script src="{{ $main.Permalink }}"></script>
 
 <noscript>
     <style>
