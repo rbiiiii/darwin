@@ -1,15 +1,4 @@
-// DETECT CONTENT LOADED
-
-document.addEventListener("DOMContentLoaded", function() {
-    document.body.classList.add('content-loaded');
-});// IE detection
-
-var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
-
-if (isIE11) {
-  console.log("IE browser");
-  document.body.classList.add('ie');
-}// SCROLL LINKS
+// SCROLL LINKS
 
 'use strict';
 

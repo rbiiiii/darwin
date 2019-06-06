@@ -31,8 +31,12 @@ body {
     }
 }
 
-.block-mw {
-    max-width:$mw;
-    margin-right:auto;
-    margin-left:auto;
+.site-wrapper {
+    width:100%;
+    max-width:1920px;
+    margin:0 auto;
+
+    @media screen and (min-width:1920px) {
+        box-shadow: 2px 2px 5px #010101;
+    }
 }

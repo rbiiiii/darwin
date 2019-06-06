@@ -2,3 +2,35 @@
 * FOOTER
 */
 
+.site-footer__copy-block {
+    max-width:400px;
+    z-index: 5;
+    padding: 0 $su;
+    text-align: center;
+    margin: 0 auto $su auto;
+
+    &__logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+
+        a {
+            transition: opacity .2s ease-out;
+            margin:0 $su/2;
+
+            &:hover, &:focus {
+                opacity:0.8;
+            }
+        }
+    }
+
+    p {
+        font-size: 0.8rem;
+        margin-top:0;
+    }
+}
+
+.site-footer__copy-img {
+    max-width:100%;
+}

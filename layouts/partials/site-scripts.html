@@ -1,5 +1,9 @@
-{{ $main := resources.Get "js/main.js" | resources.Fingerprint }}
-<script src="{{ $main.Permalink }}"></script>
+{{ $contentLoaded := resources.Get "js/content-loaded.js" }}
+{{ $ieDetection := resources.Get "js/ie-detection.js" }}
+{{ $smoothScroll := resources.Get "js/smooth-scroll.js" }}
+{{ $defaultJS := slice $contentLoaded $ieDetection $smoothScroll | resources.Concat "js/global.js" }}
+{{ $globalJS := $defaultJS | resources.Fingerprint }}
+<script src="{{ $globalJS.Permalink }}"></script>
 
 <noscript>
     <style>

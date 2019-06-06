@@ -1,63 +1,98 @@
 {{ define "main" }}
 
-    <section id="intro" class="home-section">
-        <h1 class="site-title">Darwin, l’original</h1>
-        <time>Du 12 octobre 2019 au 2 février 2020</time>
-        <p>à La <a href="http://www.citemiroir.be">Cité Miroir</a> à Liège</p>
-        <p>
-            La Cité Miroir à Liège accueillera une exposition consacrée à un personnage à la fois célèbre et méconnu, Charles Darwin, le père de la théorie de l’évolution. Au-delà du portrait de naturaliste, biologiste scientifique reconnu, se profile un humaniste, un anti-esclavagiste et un pionnier de l’éthologie animale et humaine, pour qui l’empathie et la collaboration étaient également le résultat de l’évolution.
-        </p>
+    <section class="home-section" id="intro" >
+        <picture class="home-section__img">
+            <source type="image/webp" srcset="{{.Site.BaseURL}}assets/img/darwin-loriginal-intro-small.webp 768w,
+                                              {{.Site.BaseURL}}assets/img/darwin-loriginal-intro.webp 4096w">
+            <source type="image/jpeg" srcset="{{.Site.BaseURL}}assets/img/darwin-loriginal-intro-small.jpg 768w,
+                                              {{.Site.BaseURL}}assets/img/darwin-loriginal-intro.jpg 4096w">
+            <img class="home-section__img" src="{{.Site.BaseURL}}assets/img/darwin-loriginal-intro.jpg" alt="">
+        </picture>
+        <div class="home-section__content">
+            <h1 class="site-title">Darwin, l’original</h1>
+            <time class="site-date fs-m">Du 12&nbsp;octobre&nbsp;2019 au 2&nbsp;février&nbsp;2020</time>
+            <p class="site-place fs-m" style="margin:0;">à La <a href="http://www.citemiroir.be">Cité Miroir</a> à Liège</p>
+            <p class="site-description">
+                La Cité Miroir à Liège accueillera une exposition consacrée à un personnage à la fois célèbre et méconnu, Charles Darwin, le père de la théorie de l’évolution. Au-delà du portrait de naturaliste, biologiste scientifique reconnu, se profile un humaniste, un anti-esclavagiste et un pionnier de l’éthologie animale et humaine, pour qui l’empathie et la collaboration étaient également le résultat de l’évolution.
+            </p>
+        </div>
     </section>
+        
     
     <section id="en-pratique" class="home-section">
-        <h2>En pratique</h2>
-        <ul>
-            <li>Du 12 octobre 2019 au 2 février 2020 à La <a href="http://www.citemiroir.be">Cité Miroir</a> à Liège - 22 place Xavier Neujean. 4000 Liège</li>
-            <li>En langue française, anglaise et italienne.</li>
-            <li>Exposition tout public familial et scolaire à partir de 10 ans.</li>
-            <li>
-                <h3>Entrée</h3> 
-                <ul>
-                    <li>7€</li>
-                    <li>5€ (-26 ans, demandeur d’emploi, groupe (min. 10 pers.), Carte prof, personne handicapée, Citoyen Fondation Cité Miroir, Membre Territoires de la Mémoire)</li>
-                    <li>1,25 € (Art.27)</li>
-                </ul>
-            </li>
-            <li>
-                <h3>Horaires</h3>
-                <ul>
-                    <li>Lundi au vendredi 9h-18h</li>
-                    <li>Samedi et dimanche 10h-18h</li>
-                    <li>Ouverture en soirée en fonction des activités programmées</li>
-                    <li>Fermetures exceptionnelles les 11/11, 9/12, 24/12, 25/12, 31/12 et 01/01.</li>
-                </ul>
-            </li>
-            <li>
-                <h3>Informations et réservation</h3>
-                <ul>
-                    <li>04&nbsp;230&nbsp;70&nbsp;50</li>
-                    <li><a href="mailto:reservation@citemiroir.be">reservation@citemiroir.be</a></li>
-                    <li><a href="https://www.citemiroir.be">www.citemiroir.be</a></li>
-                </ul> 
-            </li>
-        </ul>
+        <picture class="home-section__img">
+            <source type="image/webp" srcset="{{.Site.BaseURL}}assets/img/darwin-loriginal-en-pratique-small.webp 768w,
+                                              {{.Site.BaseURL}}assets/img/darwin-loriginal-en-pratique.webp 4096w">
+            <source type="image/jpeg" srcset="{{.Site.BaseURL}}assets/img/darwin-loriginal-en-pratique-small.jpg 768w,
+                                              {{.Site.BaseURL}}assets/img/darwin-loriginal-en-pratique.jpg 4096w">
+            <img class="home-section__img" src="{{.Site.BaseURL}}assets/img/darwin-loriginal-en-pratique.jpg" alt="">
+        </picture>
+        <div class="home-section__content">
+            <h2>En pratique</h2>
+            <ul>
+                <li class="no-flex">Du 12 octobre 2019 au 2 février 2020</li>
+                <li>à La <a href="http://www.citemiroir.be">Cité Miroir</a> | 22 place Xavier Neujean à 4000 Liège</li>
+                <li>En langue française, anglaise et italienne.</li>
+                <li>Exposition tout public familial et scolaire à partir de 10 ans.</li>
+                <li class="no-before">
+                    <h3>
+                        <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><style>.st0,.st1{fill:none;stroke:#2b0000;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}.st1{stroke:#fff}</style><path class="st1" d="M38.9 41.4s-24 4.7-24-17.4 24-17.4 24-17.4M34.3 20.9H9.1M34.3 27.1H9.1"/></svg>
+                        Entrée</h3> 
+                    <ul>
+                        <li>7€</li>
+                        <li>5€ (-26 ans, demandeur d’emploi, groupe (min. 10 pers.), Carte prof, personne handicapée, Citoyen Fondation Cité Miroir, Membre Territoires de la Mémoire)</li>
+                        <li>1,25 € (Art.27)</li>
+                    </ul>
+                </li>
+                <li class="no-before">
+                    <h3>
+                        <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        Horaires</h3>
+                    <ul>
+                        <li>Lundi au vendredi 9h-18h</li>
+                        <li>Samedi et dimanche 10h-18h</li>
+                        <li>Ouverture en soirée en fonction des activités programmées</li>
+                        <li>Fermetures exceptionnelles les 11/11, 9/12, 24/12, 25/12, 31/12 et 01/01.</li>
+                    </ul>
+                </li>
+                <li class="no-before">
+                    <h3>
+                        <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="8"></line></svg>
+                        Informations et réservation</h3>
+                    <ul>
+                        <li>04&nbsp;230&nbsp;70&nbsp;50</li>
+                        <li><a href="mailto:reservation@citemiroir.be">reservation@citemiroir.be</a></li>
+                        <li><a href="https://www.citemiroir.be">www.citemiroir.be</a></li>
+                    </ul> 
+                </li>
+            </ul>
+        </div>
     </section>
     
     <section id="reservation" class="home-section">
-    <h2>Réservez vos visite en groupe</h2>
+        <picture class="home-section__img">
+            <source type="image/webp" srcset="{{.Site.BaseURL}}assets/img/darwin-loriginal-reservation-small.webp 768w,
+                                              {{.Site.BaseURL}}assets/img/darwin-loriginal-reservation.webp 4096w">
+            <source type="image/jpeg" srcset="{{.Site.BaseURL}}assets/img/darwin-loriginal-reservation-small.jpg 768w,
+                                              {{.Site.BaseURL}}assets/img/darwin-loriginal-reservation.jpg 4096w">
+            <img class="home-section__img" src="{{.Site.BaseURL}}assets/img/darwin-loriginal-reservation.jpg" alt="">
+        </picture>
+        <div class="home-section__content">
+                <h2>Réservez vos visite en groupe</h2>
     
-    Visite animée                                                                25€ + ticket d’entrée/pers. (sur réservation uniquement)
-        à partir de 12 ans                                                         (durée : 1h30)
-    Au cœur de l’exposition, découvrez le parcours de Darwin, sa théorie de l'évolution, la manière dont elle a été reçue, les controverses qu'elle a suscitées et qu'elle suscite encore aujourd'hui tant sur le plan religieux que scientifique et ses implications actuelles dans différents domaines. Cette visite interrogera aussi les caractéristiques de la démarche scientifique et s'attachera à montrer comment l’une des plus grandes contributions à la pensée moderne et universelle est à nouveau menacée par l’obscurantisme. Raison et science sont essentielles dans le processus d’émancipation des individus pour pouvoir se libérer des croyances et des superstitions. 
-    
-    Visite animée avec passeport                                  25€ + ticket d’entrée/pers. (sur réservation uniquement)
-    À destination du public scolaire secondaire          (durée : 1h30)
-    Cette visite débutera par une courte animation visant à mettre en évidence ce que le public sait déjà (ou croit savoir) sur la théorie de l’évolution. Il leur sera ensuite proposé de parcourir l’exposition à leur rythme, munis d’un passeport comportant un certain nombre de questions dont les réponses seront à trouver dans l’exposition. La visite se clôturera par un échange autour des questions du carnet.
-    
-    Animation Tous croyants ?                                       25€ + ticket d’entrée/pers. (sur réservation uniquement)
-        à partir de 15 ans                                                         (durée : 2 x 50 min.)
-    Sommes-nous tous croyants ? Sommes-nous capables de nous libérer de nos croyances, au moins en partie ? Est-ce souhaitable ? Autant de questions auxquelles réfléchir ensemble. Qu’est-ce que la croyance ? Ou devrait-on dire, les croyances ? Quels rapport entretiennent-elles avec la science ? Comment font-elle partie de notre approche du monde, des autres, de notre vie en collectivité ? C’est une réflexion et un voyage au sein de nos propres représentations que nous vous proposons, en marge de Darwin, l’original, avec une exposition dynamique et vivante. Les animations permettront d’approfondir ces thèmes et plus encore, dans une approche interactive et d’ouverture du débat.
-    
+                Visite animée                                                                25€ + ticket d’entrée/pers. (sur réservation uniquement)
+                    à partir de 12 ans                                                         (durée : 1h30)
+                Au cœur de l’exposition, découvrez le parcours de Darwin, sa théorie de l'évolution, la manière dont elle a été reçue, les controverses qu'elle a suscitées et qu'elle suscite encore aujourd'hui tant sur le plan religieux que scientifique et ses implications actuelles dans différents domaines. Cette visite interrogera aussi les caractéristiques de la démarche scientifique et s'attachera à montrer comment l’une des plus grandes contributions à la pensée moderne et universelle est à nouveau menacée par l’obscurantisme. Raison et science sont essentielles dans le processus d’émancipation des individus pour pouvoir se libérer des croyances et des superstitions. 
+                
+                Visite animée avec passeport                                  25€ + ticket d’entrée/pers. (sur réservation uniquement)
+                À destination du public scolaire secondaire          (durée : 1h30)
+                Cette visite débutera par une courte animation visant à mettre en évidence ce que le public sait déjà (ou croit savoir) sur la théorie de l’évolution. Il leur sera ensuite proposé de parcourir l’exposition à leur rythme, munis d’un passeport comportant un certain nombre de questions dont les réponses seront à trouver dans l’exposition. La visite se clôturera par un échange autour des questions du carnet.
+                
+                Animation Tous croyants ?                                       25€ + ticket d’entrée/pers. (sur réservation uniquement)
+                    à partir de 15 ans                                                         (durée : 2 x 50 min.)
+                Sommes-nous tous croyants ? Sommes-nous capables de nous libérer de nos croyances, au moins en partie ? Est-ce souhaitable ? Autant de questions auxquelles réfléchir ensemble. Qu’est-ce que la croyance ? Ou devrait-on dire, les croyances ? Quels rapport entretiennent-elles avec la science ? Comment font-elle partie de notre approche du monde, des autres, de notre vie en collectivité ? C’est une réflexion et un voyage au sein de nos propres représentations que nous vous proposons, en marge de Darwin, l’original, avec une exposition dynamique et vivante. Les animations permettront d’approfondir ces thèmes et plus encore, dans une approche interactive et d’ouverture du débat.
+                
+        </div>
     </section>
     
     <section id="activites" class="home-section">
