@@ -3,7 +3,7 @@
 */
 
 .site-footer__copy-block {
-    max-width:400px;
+    max-width:700px;
     z-index: 5;
     padding: 0 $su;
     text-align: center;
@@ -28,6 +28,10 @@
     p {
         font-size: 0.8rem;
         margin-top:0;
+
+        @media screen and (min-width:1080px) {
+            font-size:1.2rem;
+        }
     }
 }
 

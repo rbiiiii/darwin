@@ -137,14 +137,15 @@
 }
 
 .site-header__copy-block {
-    max-width:620px;
+    width:100%;
     z-index: 5;
-    padding: $su*2 $su;
+    padding: $su*4 $su;
     text-align: center;
     margin: 0 auto;
+    box-sizing: border-box;
 
     @media screen and (min-width:768px) {
-        padding: $su*3 $su;
+        padding: $su*6 $su;
     }
 
     &__logos {
@@ -164,15 +165,21 @@
     }
 
     p {
-        font-size: 0.8rem;
-        margin-top:0;
+        font-size: 0.9rem;
+        margin:0 auto 1em auto;
+        display:block;
+        max-width:36em;
 
-        @media screen and (min-width:400px) {
+        @media screen and (min-width:600px) {
             font-size:1rem;
         }
 
         @media screen and (min-width:768px) {
-            font-size:1.2rem;
+            font-size:1.3rem;
+        }
+
+        @media screen and (min-width:1080px) {
+            font-size:1.6rem;
         }
     }
 }

@@ -82,14 +82,14 @@
             <picture class="home-section__img home-section__img--02 home-section__img--no-mobile">
                 <source type="image/webp" srcset="{{.Site.BaseURL}}assets/img/darwin-loriginal-reservation-02-small.webp 768w,
                                                   {{.Site.BaseURL}}assets/img/darwin-loriginal-reservation-02.webp 4096w">
-                <source type="image/jpeg" srcset="{{.Site.BaseURL}}assets/img/darwin-loriginal-reservation-02-small.jpg 768w,
+                <source type="image/jpeg" media="(min-width:768px)" srcset="{{.Site.BaseURL}}assets/img/darwin-loriginal-reservation-02-small.jpg 768w,
                                                   {{.Site.BaseURL}}assets/img/darwin-loriginal-reservation-02.jpg 4096w">
                 <img class="home-section__img home-section__img--02 home-section__img--no-mobile" src="{{.Site.BaseURL}}assets/img/darwin-loriginal-reservation-02.jpg" alt="">
             </picture>
             <picture class="home-section__img home-section__img--03 home-section__img--no-mobile">
                 <source type="image/webp" srcset="{{.Site.BaseURL}}assets/img/darwin-loriginal-reservation-03-small.webp 768w,
                                                   {{.Site.BaseURL}}assets/img/darwin-loriginal-reservation-03.webp 4096w">
-                <source type="image/jpeg" srcset="{{.Site.BaseURL}}assets/img/darwin-loriginal-reservation-03-small.jpg 768w,
+                <source type="image/jpeg" media="(min-width:768px)" srcset="{{.Site.BaseURL}}assets/img/darwin-loriginal-reservation-03-small.jpg 768w,
                                                   {{.Site.BaseURL}}assets/img/darwin-loriginal-reservation-03.jpg 4096w">
                 <img class="home-section__img home-section__img--03 home-section__img--no-mobile" src="{{.Site.BaseURL}}assets/img/darwin-loriginal-reservation-03.jpg" alt="">
             </picture>
@@ -126,5 +126,5 @@
             </div>
         </div>
     </section>
-    
+
 {{ end }}
