@@ -17,7 +17,6 @@
             </p>
         </div>
     </section>
-        
     
     <section id="en-pratique" class="home-section">
         <picture class="home-section__img">
@@ -30,18 +29,20 @@
         <div class="home-section__content">
             <h2>En pratique</h2>
             <ul>
-                <li class="no-flex">Du 12 octobre 2019 au 2 février 2020</li>
-                <li>à La <a href="http://www.citemiroir.be">Cité Miroir</a> | 22 place Xavier Neujean à 4000 Liège</li>
-                <li>En langue française, anglaise et italienne.</li>
-                <li>Exposition tout public familial et scolaire à partir de 10 ans.</li>
+                <div class="block-bg-medium">
+                    <li class="no-flex">Du 12 octobre 2019 au 2 février 2020</li>
+                    <li>à La <a href="http://www.citemiroir.be">Cité Miroir</a><br>place Xavier Neujean, 22 à 4000 Liège</li>
+                    <li>En langue française, anglaise et italienne.</li>
+                    <li>Exposition tout public familial et scolaire à partir de 10 ans.</li>
+                </div>
                 <li class="no-before">
                     <h3>
-                        <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><style>.st0,.st1{fill:none;stroke:#2b0000;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}.st1{stroke:#fff}</style><path class="st1" d="M38.9 41.4s-24 4.7-24-17.4 24-17.4 24-17.4M34.3 20.9H9.1M34.3 27.1H9.1"/></svg>
+                        <svg class="svg-icon" width="48" height="48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M38.9 41.4s-24 6.6-24-17.4 24-17.4 24-17.4m-4.6 13.3H9.1m22.2 8.2H9.1" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>
                         Entrée</h3> 
                     <ul>
-                        <li>7€</li>
-                        <li>5€ (-26 ans, demandeur d’emploi, groupe (min. 10 pers.), Carte prof, personne handicapée, Citoyen Fondation Cité Miroir, Membre Territoires de la Mémoire)</li>
-                        <li>1,25 € (Art.27)</li>
+                        <li>7&nbsp;€</li>
+                        <li>5&nbsp;€ <small>(-26 ans, demandeur d’emploi, groupe (min. 10 pers.), Carte prof, personne handicapée, Citoyen Fondation Cité Miroir, Membre Territoires de la Mémoire)</small></li>
+                        <li>1,25&nbsp;€ <small>(Art.27)</small></li>
                     </ul>
                 </li>
                 <li class="no-before">
@@ -52,7 +53,7 @@
                         <li>Lundi au vendredi 9h-18h</li>
                         <li>Samedi et dimanche 10h-18h</li>
                         <li>Ouverture en soirée en fonction des activités programmées</li>
-                        <li>Fermetures exceptionnelles les 11/11, 9/12, 24/12, 25/12, 31/12 et 01/01.</li>
+                        <li>Fermetures exceptionnelles les 11/11, 9/12, 24/12, 25/12, 31/12 et 01/01</li>
                     </ul>
                 </li>
                 <li class="no-before">
@@ -70,67 +71,60 @@
     </section>
     
     <section id="reservation" class="home-section">
-        <picture class="home-section__img">
-            <source type="image/webp" srcset="{{.Site.BaseURL}}assets/img/darwin-loriginal-reservation-small.webp 768w,
-                                              {{.Site.BaseURL}}assets/img/darwin-loriginal-reservation.webp 4096w">
-            <source type="image/jpeg" srcset="{{.Site.BaseURL}}assets/img/darwin-loriginal-reservation-small.jpg 768w,
-                                              {{.Site.BaseURL}}assets/img/darwin-loriginal-reservation.jpg 4096w">
-            <img class="home-section__img" src="{{.Site.BaseURL}}assets/img/darwin-loriginal-reservation.jpg" alt="">
-        </picture>
+        <div class="home-section__img-wrapper">
+            <picture class="home-section__img home-section__img--01">
+                <source type="image/webp" srcset="{{.Site.BaseURL}}assets/img/darwin-loriginal-reservation-small.webp 768w,
+                                                  {{.Site.BaseURL}}assets/img/darwin-loriginal-reservation.webp 4096w">
+                <source type="image/jpeg" srcset="{{.Site.BaseURL}}assets/img/darwin-loriginal-reservation-small.jpg 768w,
+                                                  {{.Site.BaseURL}}assets/img/darwin-loriginal-reservation.jpg 4096w">
+                <img class="home-section__img home-section__img--01" src="{{.Site.BaseURL}}assets/img/darwin-loriginal-reservation.jpg" alt="">
+            </picture>
+            <picture class="home-section__img home-section__img--02 home-section__img--no-mobile">
+                <source type="image/webp" srcset="{{.Site.BaseURL}}assets/img/darwin-loriginal-reservation-02-small.webp 768w,
+                                                  {{.Site.BaseURL}}assets/img/darwin-loriginal-reservation-02.webp 4096w">
+                <source type="image/jpeg" srcset="{{.Site.BaseURL}}assets/img/darwin-loriginal-reservation-02-small.jpg 768w,
+                                                  {{.Site.BaseURL}}assets/img/darwin-loriginal-reservation-02.jpg 4096w">
+                <img class="home-section__img home-section__img--02 home-section__img--no-mobile" src="{{.Site.BaseURL}}assets/img/darwin-loriginal-reservation-02.jpg" alt="">
+            </picture>
+            <picture class="home-section__img home-section__img--03 home-section__img--no-mobile">
+                <source type="image/webp" srcset="{{.Site.BaseURL}}assets/img/darwin-loriginal-reservation-03-small.webp 768w,
+                                                  {{.Site.BaseURL}}assets/img/darwin-loriginal-reservation-03.webp 4096w">
+                <source type="image/jpeg" srcset="{{.Site.BaseURL}}assets/img/darwin-loriginal-reservation-03-small.jpg 768w,
+                                                  {{.Site.BaseURL}}assets/img/darwin-loriginal-reservation-03.jpg 4096w">
+                <img class="home-section__img home-section__img--03 home-section__img--no-mobile" src="{{.Site.BaseURL}}assets/img/darwin-loriginal-reservation-03.jpg" alt="">
+            </picture>
+        </div>
         <div class="home-section__content">
-                <h2>Réservez vos visite en groupe</h2>
-    
-                Visite animée                                                                25€ + ticket d’entrée/pers. (sur réservation uniquement)
-                    à partir de 12 ans                                                         (durée : 1h30)
-                Au cœur de l’exposition, découvrez le parcours de Darwin, sa théorie de l'évolution, la manière dont elle a été reçue, les controverses qu'elle a suscitées et qu'elle suscite encore aujourd'hui tant sur le plan religieux que scientifique et ses implications actuelles dans différents domaines. Cette visite interrogera aussi les caractéristiques de la démarche scientifique et s'attachera à montrer comment l’une des plus grandes contributions à la pensée moderne et universelle est à nouveau menacée par l’obscurantisme. Raison et science sont essentielles dans le processus d’émancipation des individus pour pouvoir se libérer des croyances et des superstitions. 
-                
-                Visite animée avec passeport                                  25€ + ticket d’entrée/pers. (sur réservation uniquement)
-                À destination du public scolaire secondaire          (durée : 1h30)
-                Cette visite débutera par une courte animation visant à mettre en évidence ce que le public sait déjà (ou croit savoir) sur la théorie de l’évolution. Il leur sera ensuite proposé de parcourir l’exposition à leur rythme, munis d’un passeport comportant un certain nombre de questions dont les réponses seront à trouver dans l’exposition. La visite se clôturera par un échange autour des questions du carnet.
-                
-                Animation Tous croyants ?                                       25€ + ticket d’entrée/pers. (sur réservation uniquement)
-                    à partir de 15 ans                                                         (durée : 2 x 50 min.)
-                Sommes-nous tous croyants ? Sommes-nous capables de nous libérer de nos croyances, au moins en partie ? Est-ce souhaitable ? Autant de questions auxquelles réfléchir ensemble. Qu’est-ce que la croyance ? Ou devrait-on dire, les croyances ? Quels rapport entretiennent-elles avec la science ? Comment font-elle partie de notre approche du monde, des autres, de notre vie en collectivité ? C’est une réflexion et un voyage au sein de nos propres représentations que nous vous proposons, en marge de Darwin, l’original, avec une exposition dynamique et vivante. Les animations permettront d’approfondir ces thèmes et plus encore, dans une approche interactive et d’ouverture du débat.
-                
+            <h2>Réservez vos visite en groupe</h2>
+            <div class="reservation__item">
+                <h3>Visite animée</h3>                                                                
+                <ul class="reservation__item__list">
+                    <li><svg class="svg-icon" width="48" height="48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M38.9 41.4s-24 6.6-24-17.4 24-17.4 24-17.4m-4.6 13.3H9.1m22.2 8.2H9.1" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>25€ + ticket d’entrée/pers. (sur réservation uniquement)</li>
+                    <li><svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="square" stroke-linejoin="arcs"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>à partir de 12 ans</li>
+                    <li><svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="square" stroke-linejoin="arcs"><circle cx="12" cy="12" r="7"></circle><polyline points="12 9 12 12 13.5 13.5"></polyline><path d="M16.51 17.35l-.35 3.83a2 2 0 0 1-2 1.82H9.83a2 2 0 0 1-2-1.82l-.35-3.83m.01-10.7l.35-3.83A2 2 0 0 1 9.83 1h4.35a2 2 0 0 1 2 1.82l.35 3.83"></path></svg>durée : 1h30</li>
+                </ul>
+                <p>Au cœur de l’exposition, découvrez le parcours de Darwin, sa théorie de l'évolution, la manière dont elle a été reçue, les controverses qu'elle a suscitées et qu'elle suscite encore aujourd'hui tant sur le plan religieux que scientifique et ses implications actuelles dans différents domaines. Cette visite interrogera aussi les caractéristiques de la démarche scientifique et s'attachera à montrer comment l’une des plus grandes contributions à la pensée moderne et universelle est à nouveau menacée par l’obscurantisme. Raison et science sont essentielles dans le processus d’émancipation des individus pour pouvoir se libérer des croyances et des superstitions.</p>
+            </div>
+            <div class="reservation__item">
+                <h3>Visite animée avec passeport</h3>
+                <ul class="reservation__item__list">
+                    <li><svg class="svg-icon" width="48" height="48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M38.9 41.4s-24 6.6-24-17.4 24-17.4 24-17.4m-4.6 13.3H9.1m22.2 8.2H9.1" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>25€ + ticket d’entrée/pers. (sur réservation uniquement)</li>
+                    <li><svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="square" stroke-linejoin="arcs"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>À destination du public scolaire secondaire</li>
+                    <li><svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="square" stroke-linejoin="arcs"><circle cx="12" cy="12" r="7"></circle><polyline points="12 9 12 12 13.5 13.5"></polyline><path d="M16.51 17.35l-.35 3.83a2 2 0 0 1-2 1.82H9.83a2 2 0 0 1-2-1.82l-.35-3.83m.01-10.7l.35-3.83A2 2 0 0 1 9.83 1h4.35a2 2 0 0 1 2 1.82l.35 3.83"></path></svg>durée : 1h30</li>
+                </ul>
+                <p>
+                Cette visite débutera par une courte animation visant à mettre en évidence ce que le public sait déjà (ou croit savoir) sur la théorie de l’évolution. Il leur sera ensuite proposé de parcourir l’exposition à leur rythme, munis d’un passeport comportant un certain nombre de questions dont les réponses seront à trouver dans l’exposition. La visite se clôturera par un échange autour des questions du carnet.</p>
+            </div>
+            <div class="reservation__item">
+                <h3>Animation Tous croyants&nbsp;?</h3>
+                <ul class="reservation__item__list">
+                    <li><svg class="svg-icon" width="48" height="48" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path d="M38.9 41.4s-24 6.6-24-17.4 24-17.4 24-17.4m-4.6 13.3H9.1m22.2 8.2H9.1" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>25€ + ticket d’entrée/pers. (sur réservation uniquement)</li>
+                    <li><svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="square" stroke-linejoin="arcs"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>à partir de 15 ans </li>
+                    <li><svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="square" stroke-linejoin="arcs"><circle cx="12" cy="12" r="7"></circle><polyline points="12 9 12 12 13.5 13.5"></polyline><path d="M16.51 17.35l-.35 3.83a2 2 0 0 1-2 1.82H9.83a2 2 0 0 1-2-1.82l-.35-3.83m.01-10.7l.35-3.83A2 2 0 0 1 9.83 1h4.35a2 2 0 0 1 2 1.82l.35 3.83"></path></svg>durée : 2 x 50 min</li>
+                </ul>
+                <p>Sommes-nous tous croyants ? Sommes-nous capables de nous libérer de nos croyances, au moins en partie ? Est-ce souhaitable ? Autant de questions auxquelles réfléchir ensemble. Qu’est-ce que la croyance ? Ou devrait-on dire, les croyances ? Quels rapport entretiennent-elles avec la science ? Comment font-elle partie de notre approche du monde, des autres, de notre vie en collectivité ? C’est une réflexion et un voyage au sein de nos propres représentations que nous vous proposons, en marge de Darwin, l’original, avec une exposition dynamique et vivante. Les animations permettront d’approfondir ces thèmes et plus encore, dans une approche interactive et d’ouverture du débat.</p>
+            </div>
         </div>
     </section>
     
-    <section id="activites" class="home-section">
-    
-    <h2>Activités dans le cadre de l'exposition</h2>
-    
-    Exposition 
-    Tous croyants ?
-    Du 12 octobre 2019 au 12 janvier 2020 à La Cité Miroir
-        Compris avec l’entrée de l’exposition Darwin, l’original
-    L’exposition Tous Croyants ? propose d’éveiller l’esprit critique en abordant le monde avec un soupçon de recul. De prendre le temps d’analyser les choses à une époque où les opinions se forgent à la vitesse de 280 caractères par minute. Elle se veut une boîte à outils, une amorce de décodage, un jeu de miroir. Un moment où se demander ensemble et en toute liberté : « sommes-nous tous des croyants ? » 
-    Une exposition conçue par le Centre d’Action Laïque de la Province de Liège
-    --------------------------
-    La laïcité tacite de la science 
-    Conférence de Guillaume Lecointre, commissaire de l’exposition Darwin, l’original 
-    Le 12 novembre 2019 à 19h30 à La Cité Miroir
-    Il n’est plus exceptionnel aujourd’hui, en classe de sciences ou sur les réseaux sociaux, que les contenus scientifiques se voient questionnés voir contestés sur base de croyances ou d’opinions. La théorie de l’évolution n’échappe pas à la règle. Guillaume Lecointre, chercheur et pédagogue, nous proposera de s’armer intellectuellement face à cette réalité. Il nous confiera des clés pour mieux distinguer les savoirs, issus de la démarche scientifique, des croyances, convictions religieuses ou opinions. Il nous rappellera les conditions essentielles à l’exercice scientifique, la laïcité tacite qui l’anime et le rôle éminemment social et politique de l’espace scolaire.
-    Guillaume Lecointre est directeur du département Systématique et Évolution du Muséum National d'Histoire Naturelle en France. Il est commissaire de l’exposition Darwin, l’original. 
-    --------------------------
-    Tout le monde descend 
-        Pièce de café-théâtre de Marie-Charlotte MORIN. Production : Artenréel#1.
-    Le jeudi 21 novembre à 14h (scolaire) et à 19H30 (adultes) à La Cité Miroir
-    Plus de 150 ans après la parution de L’Origine des espèces de Charles Darwin, la science moderne nous livre les détails des mécanismes de l’évolution. Cette théorie, pourtant reconnue par toute la communauté scientifique, reste en conflit avec les religieux les plus obscurantistes, mais pas seulement. Par le jeu et la pédagogie, cette pièce est une comédie de vulgarisation scientifique qui a pour objectif d’expliquer, détailler, illustrer, redémontrer, appuyer la théorie de Darwin en la rendant accessible et joyeuse. Elle veut décloisonner la science de son cadre habituel, déverrouiller les codes d’accès traditionnels. Elle offre ainsi une entrée en matière passionnante, décalée et illustre les conflits entre science et dogmes séculaires. Une opposition ô combien d’actualité aux obscurantismes de tous horizons, surtout aux États-Unis où seul un quart des américains sont convaincus par la théorie de Darwin. 
-    Tout public à partir de 12 ans.  Durée : 1h15
-    7€
-    5€ (-26 ans, demandeur d’emploi, groupe (min. 10 pers.), Carte prof, personne handicapée, Citoyen Fondation Cité Miroir, Membre Territoires de la Mémoire)   
-    3€ (scolaire, Art.27)
-    Réservation : 04 230 70 50 – reservation@citemiroir.be – www.citemiroir.be 
-    --------------------------
-    Science et croyance, éternels ennemis
-    Rencontre avec Marcel Otte, docteur en Histoire de l’art et archéologie, Albert Moukheiber, docteur en neurosciences et psychologue clinicien et un intervenant à déterminer
-    Le 26 novembre 2019 à 9h à La Cité Miroir
-    Trois intervenants croiseront leurs regards sur l’antagonisme entre la science et la croyance. Ils proposeront des points de vue complémentaires à partager avec le public. Le combat entre la science et la croyance est-il inutile ? La science s’est-elle substituée à la religion dans la construction de notre civilisation ? Notre cerveau est-il une fabrique à croyances ? La foi est-elle compatible avec une démarche rationnelle et scientifique ? Autant de questions, et bien d’autres, qui viendront animer ce moment d’échange et de débat.
-    Avec 
-    - Marcel Otte, docteur en histoire de l’art et archéologie, professeur ordinaire émérite à l’Université de Liège
-    - Albert Moukheiber, docteur en neurosciences et psychologue clinicien. 
-    
-    - Intervenant à déterminer
-    
-    </section>
 {{ end }}

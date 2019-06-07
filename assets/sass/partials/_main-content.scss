@@ -2,6 +2,14 @@
 * HOMEPAGE
 */
 
+.site-main {
+    margin-top:12px;
+
+    @media screen and (min-width:768px) {
+        margin-top:0;
+    }
+}
+
 .home-section-wrapper {
     display: flex;
     align-items: flex-start;
@@ -15,6 +23,10 @@
     flex-direction: column;
     padding-bottom:$su*4;
 
+    &:last-of-type {
+        padding-bottom:$su*2;
+    }
+
     @media screen and (min-width:1080px) {
         flex-direction: row;
         padding-bottom:$su*8;
@@ -23,6 +35,10 @@
 
             .home-section__content {
                 margin-left: -50px;
+
+                .ie & {
+                    margin-left:0;
+                }
             }
         }
 
@@ -36,6 +52,10 @@
                 order:2;
             }
         }
+
+        &:last-of-type {
+            padding-bottom:$su*2;
+        }
     }
 }
 
@@ -43,14 +63,20 @@
     flex:2;
     @include block-mw;
     padding:0 $su;
+    position: relative;
+    z-index:2;
 
     .ie & {
         margin-left:$su*2;
+        flex: 1 1 auto;
+    }
+
+    #intro & {
+        margin-top:$su;
     }
 
     @media screen and (min-width:1080px) {
-        padding:0 $su*4;
-        margin-top: $su*2;
+        padding:$su*3 $su*4 0 $su*3;
 
         #intro & {
             margin: $su*5 $su*5 0 -280px;
@@ -60,7 +86,13 @@
         }
 
         #en-pratique & {
-            margin-top:0;
+            margin-right: -220px;
+            margin-left: $su;
+        }
+
+        .ie & {
+            margin-left:$su*2;
+            flex: 0 0 auto;
         }
     }
 }
@@ -71,6 +103,14 @@
     flex: 2;
     transition:clip-path 200ms ease-out;
 
+    &--no-mobile {
+        display:none;
+    }
+
+    .ie & {
+        flex: 1 1 auto;
+    }
+
     #intro & {
         clip-path: polygon(0% 0%, 100% 0%, 78% 94%, 0% 100%);
     }
@@ -80,6 +120,10 @@
     }
 
     @media screen and (min-width:1080px) {
+
+        &--no-mobile {
+            display:block;
+        }
 
         #intro & {
             clip-path: polygon(0% 0%, 96.95% 0%, 77.42% 92.15%, 0% 100%);
@@ -94,14 +138,11 @@
         #en-pratique:hover & {
             clip-path: polygon(17.4% 1.35%, 100% 0%, 100% 96.09%, 0.40% 99.85%);
         }
-
-        #reservation & {
-            clip-path: polygon(0% 0%, 89.8% 18.13%, 87.13% 91.15%, 0% 100%);
-        }
-        #reservation:hover & {
-            clip-path: polygon(0% 0%, 96.46% 19.85%, 95.22% 86.01%, 0% 100%);
-        }
     }  
+}
+
+.home-section__img-wrapper {
+    clip-path: none !important;
 }
 
 .site-title {
@@ -116,34 +157,179 @@
 .site-description {
     margin-top:$su;
     margin-bottom:0;
+
+    @media screen and (min-width:768px) {
+        font-size: 1.3rem;
+    }
+}
+
+.svg-icon {
+    width: 1.6em;
+    margin-right:0.5em;
 }
 
 #en-pratique {
+
+    .block-bg-medium {
+        
+        @media screen and (min-width:1080px) {
+            background-color:$bg-medium;
+            padding:$su;
+            margin-bottom:$su*2;
+        }
+    }
 
     h3 {
         margin-top:$su*2;
         display: flex;
         align-items: center;
-    }
 
-    .svg-icon {
-        width: 1.6em;
-        margin-right:0.5em;
+        .ie & {
+            height:1.5em;
+        }
+
+        @media screen and (min-width:1080px) {
+            margin-top:0;
+        }
     }
 
     li:not(.no-before) {
         position:relative;
-        display:flex;
-        margin-left:2em;
+        display:inline-block; 
+        margin-left: 2em;
+        width: calc(100% - #{$su*2});
 
         &:before {
             content:"•";
-            display:block;
-            margin-right:0.5em;
+            display: inline-block;
+            margin-left: -0.7em;
+            padding-right: 0.3em;
+            color:$bg-light;
+        }
+    }
+
+    li.no-before {
+        
+        @media screen and (min-width:1080px) {
+            background-color:$bg-medium;
+            padding:$su;
+            margin-bottom:$su*2;
+        }
+    }
+
+    ul li ul li:last-child {
+        margin-bottom:0;
+    }
+}
+
+#reservation {
+
+    @media screen and (min-width:1080px) {
+
+        .home-section__content {
+            transform: translateX(-60px);
+            padding: $su*4 $su*3 $su*3 $su*3;
+        }
+        
+        h3 {
+            margin-top:0;
+        }
+    }
+
+    @media screen and (min-width:1360px) {
+
+        .home-section__content {
+            transform: translateX(-100px);
+        }
+    }
+
+    .home-section__img-wrapper {
+        width:100%;
+        height:auto;
+        flex: 2;
+        transition:clip-path 200ms ease-out;
+    
+        &--no-mobile {
+            display:none;
+        }
+    
+        .ie & {
+            flex: 1 1 auto;
+        }
+    
+        img.home-section__img--01 {
+            clip-path: polygon(0% 0%, 89.8% 18.13%, 87.13% 91.15%, 0% 100%);
         }
 
-        a {
-            margin:0 0.3em;
+        img.home-section__img--02 {
+            clip-path: polygon(0.35% 14.26%, 100.01% 5.43%, 99.66% 99.33%, 0.81% 95.83%);
+        }
+
+        img.home-section__img--03 {
+            clip-path: polygon(4.87% 12.7%, 99.08% 6.47%, 99.66% 99.33%, 6.84% 80.7%)
+        }
+    
+        @media screen and (min-width:1080px) {
+    
+            &--no-mobile {
+                display:block;
+            }
+    
+            img.home-section__img--01 {
+                clip-path: polygon(0% 0%, 89.8% 18.13%, 87.13% 91.15%, 0% 100%);
+            }
+            &:hover img.home-section__img--01 {
+                clip-path: polygon(0% 0%, 96.46% 19.85%, 95.22% 86.01%, 0% 100%);
+            }
+        }  
+    }
+}
+
+.reservation__item {
+    margin:$su*4 auto;
+
+    @media screen and (max-width:1079px) {
+
+        &:after {
+            content: "";
+            height: 1px;
+            background: #fff;
+            width: 30%;
+            margin: $su*4 auto 0 0;
+            display: block;
+        }
+
+        &:last-of-type:after {
+            display:none;
+        }
+
+        h3 {
+            margin-bottom:1.2em;
+        }
+    }
+
+    @media screen and (min-width:1080px) {
+        background: $bg-medium;
+        padding:$su*2;
+        margin:$su*2 auto;
+    }
+}
+
+.reservation__item__list {  
+
+    li {
+        display: flex;
+        align-items: center;
+        margin: 0 0 $su 0;
+    }
+
+    .svg-icon {
+        width: 1.4em;
+        margin-right: .5em;
+        flex-shrink: 0;
+
+        @media screen and (min-width:768px) {
+            width:1.6em;
         }
     }
 }

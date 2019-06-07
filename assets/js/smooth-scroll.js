@@ -61,25 +61,28 @@ function scrollIt(a) {
         return window.scroll(0, Math.ceil(o * (l - g) + g)), window.pageYOffset === l ? void(e && e()) : void requestAnimationFrame(b)
     }
     return !1 == 'requestAnimationFrame' in window ? (window.scroll(0, l), void(e && e())) : void b()
-}
+}   
 
 function getAnchor(link) {
     return (link.split('#').length > 1) ? link.split('#')[1] : null
 }
 
 var siteNavLinks = document.querySelectorAll(".site-nav__link");
-siteNavLinks.forEach(function(a) {
-    var b = a.href,
+var siteNavControl = document.getElementById("site-nav__control");
+
+siteNavLinks.forEach(function(link) {
+    var b = link.href,
         c = getAnchor(b),
         d = document.getElementById(c);
-        a.addEventListener("click", function(a) {
-            a.preventDefault(), scrollIt(d, 800, "easeOutQuad");
-            a.target.blur();
+        link.addEventListener("click", function(link) {
+            link.preventDefault(), scrollIt(d, 800, "easeOutQuad");
+            link.target.blur();
+            siteNavControl.checked = !siteNavControl.checked;
         })
 });
 
 var introLink = document.getElementById("site-header__link-intro");
-var introSection = document.getElementById("intro");
+var introSection = document.getElementById("site-header__organisation");
 
 introLink.addEventListener("click", function(e) {
     e.preventDefault(), scrollIt(introSection, 800, "easeOutQuad");

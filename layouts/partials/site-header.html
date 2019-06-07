@@ -678,16 +678,23 @@ y37ZL/tlv+yX/bJf9st+2S/75Vew/L8AAwDf44h5dGSMOgAAAABJRU5ErkJggg==" transform="mat
 		</div>
 	</div>
 </header>
-<nav class="site-nav">
-	<ul class="site-nav__list">
-		<li class="site-nav__item">
-			<a class="site-nav__link" href="{{.Site.BaseURL}}#intro">Intro</a>
-		</li>
-		<li class="site-nav__item">
-			<a class="site-nav__link" href="{{.Site.BaseURL}}#en-pratique">En pratique</a>
-		</li>
-		<li class="site-nav__item">
-			<a class="site-nav__link" href="{{.Site.BaseURL}}#reservation">Réservation</a>
-		</li>
-	</ul>
-</nav>
+<div class="site-nav-wrapper">
+	<nav class="site-nav">
+		<label for="site-nav__control" class="site-nav__control-label">Menu</label>
+		<input id="site-nav__control" class="hide" type="checkbox">
+		<ul class="site-nav__list">
+			<li class="site-nav__item">
+				<a class="site-nav__link" href="{{.Site.BaseURL}}#intro">Intro</a>
+			</li>
+			<li class="site-nav__item">
+				<a class="site-nav__link" href="{{.Site.BaseURL}}#en-pratique">En pratique</a>
+			</li>
+			<li class="site-nav__item">
+				<a class="site-nav__link" href="{{.Site.BaseURL}}#reservation">Réservation</a>
+			</li>
+			<!-- <li class="site-nav__item">
+				<a class="site-nav__link" href="{{.Site.BaseURL}}activites-annexes">Activités annexes</a>
+			</li> -->
+		</ul>
+	</nav>
+</div>

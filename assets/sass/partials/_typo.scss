@@ -8,15 +8,23 @@ h1, h2, h3, h4 {
 h1 {
     font-size:2.4rem;
     margin-bottom:0.5em;
+
+    @media screen and (min-width:768px) {
+        font-size: 2.8rem;
+    }
 }
 
 h2 {
     font-size:1.8rem;
-	margin-bottom: 1em;
+    margin-bottom: 1em;
+    
+    @media screen and (min-width:768px) {
+        font-size: 2.2rem;
+    }
 }
 
 h3 {
-    font-size:1.1rem;
+    font-size:1.4rem;
 }
 
 p, ul {
@@ -36,7 +44,15 @@ ul {
 }
 
 .fs-m {
-    font-size:1.6rem;
+    font-size:1.4rem;
+    
+    @media screen and (min-width:400px) {
+        font-size: 1.6rem;
+    }
+
+    @media screen and (min-width:768px) {
+        font-size: 1.8rem;
+    }
 }
 
 .fs-s {

@@ -1,33 +1,88 @@
-.site-nav {
-    border-top:2px solid white;
-    border-bottom:2px solid white;
-    width: 100%;
-    margin-top:$su;
-    background:$bg-light;
+.site-nav-wrapper {
     position: sticky;
     top:0;
-    z-index: 10;
+    height: 2em;
+    z-index: 15;
 
-    @media screen and (min-width:1080px) {
-        margin-top:0;
+    .ie & {
+        position: relative;
     }
 }
 
+.site-nav {
+    position: absolute;
+    border-top:2px solid white;
+    border-bottom:2px solid white;
+    width: 100%;
+    background:$bg-light;
+    top:0;
+    overflow: hidden;
+}
+
 .site-nav__list {
+    top:0;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     max-width: 800px;
     margin: 0 auto;
     padding:0;
+    height:0;
+    transform:translateY(-150px) scaleY(0);
+    position: relative;
+    z-index:10;
+    opacity:0;
+    transition: transform 200ms ease-in-out, height 200ms ease-in-out, opacity 100ms ease-in-out;
+    
+    .ie & {
+        flex-direction: row;
+    }
+
+    @media screen and (min-width:768px) {
+        flex-direction: row;
+        height:auto;
+        transform:translateY(0) scaleY(1);
+        opacity:1;
+    }
+
+}
+
+.site-nav__control-label {
+    width: 100%;
+    display: block;
+    background-color: #4c6470;
+    padding: 0.5em 0;
+    position: relative;
+    z-index: 15;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:hover, &:target {
+        cursor:pointer;
+        background-color: $red;
+    }
+
+    @media screen and (min-width:768px) {
+        display:none;
+    }
+}
+
+#site-nav__control:checked ~ .site-nav__list {
+    transform:translateY(0) scaleY(1);
+    height:auto;
+    opacity: 1;
 }
 
 .site-nav__item {
     line-height:1;
     margin:0;
-    border-right:2px solid white;
 
-    &:first-child {
-        border-left:2px solid white;
+    @media screen and (min-width:768px) {
+        border-right:2px solid white;
+
+        &:first-child {
+            border-left:2px solid white;
+        }
     }
 }
 
@@ -39,14 +94,15 @@
     text-transform: uppercase;
     font-size:0.9rem;
     transition:background-color 150ms ease-out;
+    text-align: center;
 
     @media screen and (min-width:400px) {
         font-size: 1.1rem;
-        padding: 0.5em 0.8em 0.4em;
     }
 
     @media screen and (min-width:768px) {
         font-size: 1.4rem;
+        text-align: left;
     }
 
     &:hover, &:focus {
