@@ -7,44 +7,8 @@ function scrollIt(a) {
         d = 2 < arguments.length && arguments[2] !== void 0 ? arguments[2] : 'linear',
         e = arguments[3],
         f = {
-            linear: function linear(m) {
-                return m
-            },
-            easeInQuad: function easeInQuad(m) {
-                return m * m
-            },
             easeOutQuad: function easeOutQuad(m) {
                 return m * (2 - m)
-            },
-            easeInOutQuad: function easeInOutQuad(m) {
-                return 0.5 > m ? 2 * m * m : -1 + (4 - 2 * m) * m
-            },
-            easeInCubic: function easeInCubic(m) {
-                return m * m * m
-            },
-            easeOutCubic: function easeOutCubic(m) {
-                return --m * m * m + 1
-            },
-            easeInOutCubic: function easeInOutCubic(m) {
-                return 0.5 > m ? 4 * m * m * m : (m - 1) * (2 * m - 2) * (2 * m - 2) + 1
-            },
-            easeInQuart: function easeInQuart(m) {
-                return m * m * m * m
-            },
-            easeOutQuart: function easeOutQuart(m) {
-                return 1 - --m * m * m * m
-            },
-            easeInOutQuart: function easeInOutQuart(m) {
-                return 0.5 > m ? 8 * m * m * m * m : 1 - 8 * --m * m * m * m
-            },
-            easeInQuint: function easeInQuint(m) {
-                return m * m * m * m * m
-            },
-            easeOutQuint: function easeOutQuint(m) {
-                return 1 + --m * m * m * m * m
-            },
-            easeInOutQuint: function easeInOutQuint(m) {
-                return 0.5 > m ? 16 * m * m * m * m * m : 1 + 16 * --m * m * m * m * m
             }
         },
         g = window.pageYOffset,
@@ -67,7 +31,7 @@ function getAnchor(link) {
     return (link.split('#').length > 1) ? link.split('#')[1] : null
 }
 
-var siteNavLinks = document.querySelectorAll(".site-nav__link");
+var siteNavLinks = document.querySelectorAll(".home .site-nav__link");
 var siteNavControl = document.getElementById("site-nav__control");
 
 siteNavLinks.forEach(function(link) {
@@ -84,7 +48,9 @@ siteNavLinks.forEach(function(link) {
 var introLink = document.getElementById("site-header__link-intro");
 var introSection = document.getElementById("site-header__organisation");
 
-introLink.addEventListener("click", function(e) {
-    e.preventDefault(), scrollIt(introSection, 800, "easeOutQuad");
-    e.target.blur();
-})
+if (introLink) {
+    introLink.addEventListener("click", function(e) {
+        e.preventDefault(), scrollIt(introSection, 800, "easeOutQuad");
+        e.target.blur();
+    })
+}

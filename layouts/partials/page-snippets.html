@@ -1,13 +1,19 @@
 <script type="application/ld+json">
-    {
-    "@context": "http://schema.org",
-    "@type": "WebSite",
-    "url": "{{ .Site.BaseURL | safeHTML }}",
-    "author": {
-        "@type": "Person",
-        "name": "{{ .Site.Params.author }}"
+ {
+  "@context": "http://schema.org",
+  "@type": "Event",
+  "location": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Liège",
+      "postalCode": "4000",
+      "streetAddress": "Place Xavier Neujean 22"
     },
-    "description": "{{ .Site.Params.description | safeHTML }}",
-    "image": "https://code.luasoftware.com/img/cover.png"
-    }
+    "name": "Cité Miroir"
+  },
+  "name": "{{.Site.Title}}",
+  "startDate": "2019-10-12T10:00"
+  "endDate": "2020-02-02T18:00"
+}
 </script>

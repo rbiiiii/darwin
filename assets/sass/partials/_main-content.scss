@@ -274,15 +274,22 @@
             &--no-mobile {
                 display:block;
             }
-    
-            img.home-section__img--01 {
-                clip-path: polygon(0% 0%, 89.8% 18.13%, 87.13% 91.15%, 0% 100%);
-            }
-            &:hover img.home-section__img--01 {
-                clip-path: polygon(0% 0%, 96.46% 19.85%, 95.22% 86.01%, 0% 100%);
-            }
         }  
     }
+
+    @media screen and (min-width:1080px) {
+    
+        &--no-mobile {
+            display:block;
+        }
+
+        img.home-section__img--01 {
+            clip-path: polygon(0% 0%, 89.8% 18.13%, 87.13% 91.15%, 0% 100%);
+        }
+        &:hover img.home-section__img--01 {
+            clip-path: polygon(0% 0%, 96.46% 19.85%, 95.22% 86.01%, 0% 100%);
+        }
+    }  
 }
 
 .reservation__item {
