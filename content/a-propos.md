@@ -1,6 +1,7 @@
 ---
 slug: a-propos 
 layout: single
+title: A propos
 ---
 
 Les idées révolutionnaires de Darwin et les bouleversements scientifiques qu’il a contribué à créer égalent les travaux de Copernic dans ses effets à long terme sur nos savoirs, nos représentations et nos croyances. Après Copernic, la Terre n’est plus au centre de l’Univers, mais elle tourne autour du Soleil. Après Darwin, la biologie s’est enrichie d’une théorie générale lui permettant d’expliquer la diversité et l’évolution des êtres vivants. Grâce à lui, on comprend que l’Homme n’est plus au centre, et encore moins au sommet du vivant.
