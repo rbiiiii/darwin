@@ -306,12 +306,20 @@
             display: block;
         }
 
-        &:last-of-type:after {
+        &:first-of-type:after, &:last-of-type:after {
             display:none;
         }
 
         h3 {
             margin-bottom:1.2em;
+
+            &:after {
+                content: "";
+                height: 1px;
+                background: white;
+                display: block;
+                margin-top: $su;
+            }
         }
     }
 
@@ -319,6 +327,22 @@
         background: $bg-medium;
         padding:$su*2;
         margin:$su*2 auto;
+
+        h3 {
+
+            &:after {
+                display: none;
+            }
+        }
+
+        h4 {
+            margin-top:0;
+            margin-bottom:1.2em;
+        }
+    
+        p {
+            margin-bottom:0;
+        }
     }
 }
 
