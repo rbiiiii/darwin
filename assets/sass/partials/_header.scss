@@ -78,7 +78,7 @@
     bottom:0;
     left:50%;
     transform: translateX(-50%);
-    width: 50vh;
+    width: 62vh;
     min-width: 320px;
     max-width: 90vw;
     height:100%;
@@ -118,17 +118,13 @@
 
 .site-header__txt-img {
     position: absolute;
-    bottom: 10vh;
+    bottom: 6vh;
     width:100%;
     height:auto;
     opacity:0;
 
     .content-loaded & {
         animation: header-txt .25s .7s forwards ease-out;
-    }
-
-    @media screen and (min-width:768px) {
-        max-width:600px;
     }
 }
 
