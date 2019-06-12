@@ -37,8 +37,4 @@ a {
         clip-path: polygon(95.45% 89.81%, 3.73% 85.98%, 7.53% 7.94%, 99% 4.88%);
         background-color: $red;
     }
-
-    .ie & {
-        padding: .5em 1em .1em;
-    }
 }
