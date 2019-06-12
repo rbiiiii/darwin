@@ -18,30 +18,36 @@
     &.apropos__img-block--01 {
         height: 520px;
         clip-path: polygon(99.68% 98.20%, 0.2% 95.55%, 0.8% 1.08%, 96.41% 2.3%);
-        background-image: url(http://localhost:1313/assets/img/darwin-loriginal-a-propos-01-small.jpg);
+        background-image: url(../assets/img/darwin-loriginal-a-propos-01-small.jpg);
+        background-image: url(../assets/img/darwin-loriginal-a-propos-01-small.webp);
 
         @media screen and (min-width:768px) {
-            background-image: url(http://localhost:1313/assets/img/darwin-loriginal-a-propos-01.jpg);
+            background-image: url(../assets/img/darwin-loriginal-a-propos-01.jpg);
+            background-image: url(../assets/img/darwin-loriginal-a-propos-01.webp);
         }
     }
 
     &.apropos__img-block--02 {
         height:400px;
         clip-path: polygon(94.03% 92.45%, 1.57% 87.80%, 5.32% 5.33%, 95.36% 0%);
-        background-image: url(http://localhost:1313/assets/img/darwin-loriginal-a-propos-02-small.jpg);
+        background-image: url(../assets/img/darwin-loriginal-a-propos-02-small.jpg);
+        background-image: url(../assets/img/darwin-loriginal-a-propos-02-small.webp);
 
         @media screen and (min-width:768px) {
-            background-image: url(http://localhost:1313/assets/img/darwin-loriginal-a-propos-02.jpg);
+            background-image: url(../assets/img/darwin-loriginal-a-propos-02.jpg);
+            background-image: url(../assets/img/darwin-loriginal-a-propos-02.webp);
         }
     }
 
     &.apropos__img-block--03 {
         height:400px;
         clip-path: polygon(92.99% 99.7%, 0.2% 95.55%, 0.8% 1.08%, 93.99% 1.55%);
-        background-image: url(http://localhost:1313/assets/img/darwin-loriginal-a-propos-03-small.jpg);
+        background-image: url(../assets/img/darwin-loriginal-a-propos-03-small.jpg);
+        background-image: url(../assets/img/darwin-loriginal-a-propos-03-small.webp);
 
         @media screen and (min-width:768px) {
-            background-image: url(http://localhost:1313/assets/img/darwin-loriginal-a-propos-03.jpg);
+            background-image: url(../assets/img/darwin-loriginal-a-propos-03.jpg);
+            background-image: url(../assets/img/darwin-loriginal-a-propos-03.webp);
         }
     }
 }
