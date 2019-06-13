@@ -3,16 +3,12 @@ jobs:
   build:
     docker:
       - image: cibuilds/hugo:latest
+      - image: circleci/node:latest
 
     working_directory: ~/hugo
     environment:
       HUGO_BUILD_DIR: ~/hugo/public
     steps:
-      - run: apk update && apk add git && apk add nodejs
-      - checkout
-      - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
-      - checkout
-      - run: node -v
       - run: npm install
       - run: npx gulp build
       - run: node .circleci/deploy.js
