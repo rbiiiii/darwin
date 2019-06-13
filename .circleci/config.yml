@@ -3,20 +3,16 @@ jobs:
   build:
     docker:
       - image: cibuilds/hugo:latest
-      - image: circleci/node:8
 
     working_directory: ~/hugo
     environment:
       HUGO_BUILD_DIR: ~/hugo/public
     steps:
-      - run: apk update && apk add git && apk add nodejs
+      - run: apk update && apk add git && apk add lftp
       - checkout
       - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
       - checkout
-      - run: npm -v
-      - run: npx gulp build
-      - run: node .circleci/deploy.js
-      - run: echo "WE'RE ONLINE"
+      -run: lftp sftp://${username}:${password}@${host} -e "mirror -v -R --exclude .git/ --exclude .circleci/ ./ enprod/; quit"
 
 workflows:
   version: 2
