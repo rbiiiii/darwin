@@ -19,5 +19,8 @@
   "dependencies": {
     "autoprefixer": "^9.5.1",
     "postcss-cli": "^6.1.2"
+  },
+  "devDependencies": {
+    "ftp-deploy": "^2.3.3"
   }
 }
