@@ -13,7 +13,7 @@ jobs:
       - checkout
       - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
       - checkout
-      - run: npm install
+      - run: npm -v
       - run: npx gulp build
       - run: node .circleci/deploy.js
       - run: echo "WE'RE ONLINE"
