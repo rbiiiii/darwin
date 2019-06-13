@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: cibuilds/hugo:latest
       - image: circleci/node:latest
-      
+
     working_directory: ~/hugo
     environment:
       HUGO_BUILD_DIR: ~/hugo/public
@@ -12,7 +12,9 @@ jobs:
       - run: apk update && apk add git
       - checkout
       - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
+      - checkout
       - run: npm install
+      - run: npx gulp build
       - run: node .circleci/deploy.js
       - run: echo "WE'RE ONLINE"
 
