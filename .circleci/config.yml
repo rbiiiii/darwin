@@ -1,9 +1,9 @@
 version: 2
 jobs:
-  build:
+  
+  build_hugo:
     docker:
       - image: cibuilds/hugo:latest
-      - image: circleci/node:latest
     working_directory: ~/hugo
     environment:
       HUGO_BUILD_DIR: ~/hugo/public
@@ -11,6 +11,11 @@ jobs:
       - run: apk update && apk add git
       - checkout
       - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
+
+  conf_ftp:
+    docker:
+      - image: circleci/node:latest
+    steps:
       - run: npm install
       - run: node .circleci/deploy.js
       - run: echo "WE'RE ONLINE"
@@ -19,7 +24,12 @@ workflows:
   version: 2
   deploy:
     jobs:
-      - build:
+      - build_hugo:
+          filters:
+            branches:
+              only:
+                - master
+      - conf_ftp:
           filters:
             branches:
               only:
