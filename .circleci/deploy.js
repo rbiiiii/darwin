@@ -1,5 +1,6 @@
 var FtpDeploy = require('ftp-deploy');
 var ftpDeploy = new FtpDeploy();
+
 var config = {
     username: process.env.FTPUSERNAME,
     password: process.env.FTPPASS,
@@ -9,6 +10,7 @@ var config = {
     remoteRoot: "/enprod",
     include: ['*']
 }
+
 ftpDeploy.deploy(config, function(err) {
     if (err) console.log(err)
     else console.log('finished');
