@@ -12,7 +12,7 @@ jobs:
       - checkout
       - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
       - checkout
-      - run: lftp sftp://${username}:${password}@${host} -e "mirror -v -R --exclude .git/ --exclude .circleci/ ./ enprod/; quit"
+      - run: lftp sftp://${username}:${password}@${host} -e "mirror -v -R --exclude .git/ --exclude .circleci/ ./ /enprod; quit"
       - run: scp -r ./ "${username}@$${host}:/enprod"
 
 workflows:
