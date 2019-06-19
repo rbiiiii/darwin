@@ -42,7 +42,7 @@ function getAnchor(link) {
     return (link.split('#').length > 1) ? link.split('#')[1] : null
 }
 
-var siteNavLinks = document.querySelectorAll(".home .site-nav__link");
+var siteNavLinks = document.querySelectorAll(".home .site-nav__link--internal");
 var siteNavControl = document.getElementById("site-nav__control");
 
 siteNavLinks.forEach(function(link) {
