@@ -38,3 +38,34 @@ a {
         background-color: $red;
     }
 }
+
+#en-pratique, .reservation__item--booking, .main-single aside {
+
+    li:not(.no-before) {
+        position:relative;
+        display:inline-block; 
+        margin-left: 1.75em;
+        width: calc(100% - #{$su*2});
+    
+        &:before {
+            content:"•";
+            display: inline-block;
+            margin-left: -0.7em;
+            padding-right: 0.3em;
+            color:$bg-light;
+        }
+    }
+    
+    li.no-before {
+        
+        @media screen and (min-width:1080px) {
+            background-color:$bg-medium;
+            padding:$su;
+            margin-bottom:$su*2;
+        }
+    }
+    
+    ul li ul li:last-child {
+        margin-bottom:0;
+    }
+}

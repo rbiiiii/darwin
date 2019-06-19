@@ -48,3 +48,120 @@
         }
     }
 }
+
+.main-single {
+    
+    h1 {
+        padding:0 $su;
+        margin-bottom:$su*3;
+    }
+    
+    .block-bg-medium {
+        padding:$su*2 1.2rem;
+        background-color:$bg-medium;
+        margin-bottom:$su*4;
+
+        @media screen and (min-width:1080px) {
+            padding:$su*2;
+        }
+    }
+}
+
+aside {
+
+    h2 {
+        margin-top:0;
+        display:flex;
+    }
+}
+
+.activite {
+    position:relative;
+
+    h1 {
+        padding:0;
+        margin:0;
+    }
+
+    header {
+        margin-top:$su;
+    }
+
+    .event__img {
+        width:100%;
+        height:auto;
+        
+        img {
+            width:100%;
+            height:auto;
+        }
+    }
+    
+    @media screen and (min-width:1080px) {
+        $unit : 480px;
+        
+        header {
+            margin-top:0;
+        }
+        
+        &:nth-of-type(2) {
+            position: relative;
+            margin-top:calc( #{$unit} + #{$su}*2);
+            
+            .event__img {
+                position: absolute;
+                top:-$unit;
+                z-index:-1;
+                clip-path: polygon(100.04% 99.08%, 0.2% 95.55%, -0.27% 12.87%, 91.53% 1.42%);
+            }
+        }
+    }
+}
+
+.event__subtitle {
+    font-style: italic;
+}
+
+.event__time {
+    display:block;
+    position:relative;
+    padding-top:$su;
+    @include ff-b;
+
+    &:before {
+        content:"";
+        height:1px;
+        background-color:white;
+        margin-bottom:15px;
+        position: absolute;
+        top:0;
+        width:33%;
+    }
+}
+
+.event__venue-price {
+    position:relative;
+    padding-bottom:$su;
+    @include ff-b;
+
+    &:after {
+        content:"";
+        height:1px;
+        background-color:white;
+        margin-top:15px;
+        position: absolute;
+        bottom:0;
+        left:0;
+        width:33%;
+    }
+}
+
+.event__price {
+    @include ff-r;
+}
+
+.float-img {
+    float:left;
+    display:block;
+    margin:0.2em 1em 0 0;
+}
