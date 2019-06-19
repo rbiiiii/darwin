@@ -1,0 +1,41 @@
+items:
+  - title: Exposition Tous croyants&nbsp;?
+    subtitle: Compris avec l’entrée de l’exposition <em>Darwin, l’original</em>
+    date: "2019-10-12"
+    enddate: "2020-01-12"
+    date_for_humans: Du 12 octobre 2019 au 12 janvier 2020
+    place: à La Cité Miroir
+    address: Place Xavier Neujean, 22 à 4000 Liège
+    description: "L’exposition <em>Tous Croyants&nbsp;?</em> propose d’éveiller l’esprit critique en abordant le monde avec un soupçon de recul. De prendre le temps d’analyser les choses à une époque où les opinions se forgent à la vitesse de 280 caractères par minute. Elle se veut une boîte à outils, une amorce de décodage, un jeu de miroir. Un moment où se demander ensemble et en toute liberté : « sommes-nous tous des croyants ? ». Une exposition conçue par le Centre d’Action Laïque de la Province de Liège"
+
+  - title: La laïcité tacite de la science
+    subtitle: Conférence de <strong>Guillaume Lecointre</strong>, commissaire de l’exposition <em>Darwin, l’original</em>
+    date: "2019-11-12T19:30:00.00+02:00"
+    date_for_humans: Le 12 novembre 2019 à 19h30
+    place: à La Cité Miroir
+    address: Place Xavier Neujean, 22 à 4000 Liège
+    description: "Il n’est plus exceptionnel aujourd’hui, en classe de sciences ou sur les réseaux sociaux, que les contenus scientifiques se voient questionnés voir contestés sur base de croyances ou d’opinions. La théorie de l’évolution n’échappe pas à la règle. Guillaume Lecointre, chercheur et pédagogue, nous proposera de s’armer intellectuellement face à cette réalité. Il nous confiera des clés pour mieux distinguer les savoirs, issus de la démarche scientifique, des croyances, convictions religieuses ou opinions. Il nous rappellera les conditions essentielles à l’exercice scientifique, la laïcité tacite qui l’anime et le rôle éminemment social et politique de l’espace scolaire. <em>Guillaume Lecointre est directeur du département Systématique et Évolution du Muséum National d'Histoire Naturelle en France. Il est commissaire de l’exposition Darwin, l’original.</em>"
+
+  - title: Tout le monde descend
+    subtitle: "Pièce de café-théâtre de <strong>Marie-Charlotte Morin</strong>. Production : Artenréel#1."
+    date: "2019-11-21T19:30:00.00+02:00"
+    date_for_humans: Le jeudi 21 novembre à 14h (scolaire) et à 19H30 (adultes)
+    place: à La Cité Miroir
+    address: Place Xavier Neujean, 22 à 4000 Liège
+    description: "Plus de 150 ans après la parution de L’Origine des espèces de Charles Darwin, la science moderne nous livre les détails des mécanismes de l’évolution. Cette théorie, pourtant reconnue par toute la communauté scientifique, reste en conflit avec les religieux les plus obscurantistes, mais pas seulement. Par le jeu et la pédagogie, cette pièce est une comédie de vulgarisation scientifique qui a pour objectif d’expliquer, détailler, illustrer, redémontrer, appuyer la théorie de Darwin en la rendant accessible et joyeuse. Elle veut décloisonner la science de son cadre habituel, déverrouiller les codes d’accès traditionnels. Elle offre ainsi une entrée en matière passionnante, décalée et illustre les conflits entre science et dogmes séculaires. Une opposition ô combien d’actualité aux obscurantismes de tous horizons, surtout aux États-Unis où seul un quart des américains sont convaincus par la théorie de Darwin."
+    practical:
+      - "Tout public à partir de 12 ans."
+      - "Durée : 1h15"
+      - "7€"
+      - "5€ <small>(-26 ans, demandeur d’emploi, groupe (min. 10 pers.), Carte prof, personne handicapée, Citoyen Fondation Cité Miroir, Membre Territoires de la Mémoire)</small>"
+      - "3€ <small>(scolaire, Art.27)</small>"
+      - "Réservation : 04 230 70 50 – <a href="mailto:reservation@citemiroir.be">reservation@citemiroir.be</a> – <a href="http://www.citemiroir.be">www.citemiroir.be</a>"
+
+  - title: Science et croyance, éternels ennemis
+    subtitle: "Rencontre avec <strong>Marcel Otte</strong>, docteur en Histoire de l’art et archéologie, <strong>Albert Moukheiber</strong>, docteur en neurosciences et psychologue clinicien"
+    date: "2019-11-26T09:00:00.00+02:00"
+    date_for_humans: Le 26 novembre 2019 à 9h
+    place: à La Cité Miroir
+    address: Place Xavier Neujean, 22 à 4000 Liège
+    description: "Trois intervenants croiseront leurs regards sur l’antagonisme entre la science et la croyance. Ils proposeront des points de vue complémentaires à partager avec le public. Le combat entre la science et la croyance est-il inutile ? La science s’est-elle substituée à la religion dans la construction de notre civilisation ? Notre cerveau est-il une fabrique à croyances ? La foi est-elle compatible avec une démarche rationnelle et scientifique ? Autant de questions, et bien d’autres, qui viendront animer ce moment d’échange et de débat."
+    

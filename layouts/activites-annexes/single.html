@@ -1,0 +1,11 @@
+{{ define "main" }}
+    <h1>Activités dans le cadre de l'exposition</h1>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quas velit delectus repellendus. Ut, ducimus ab quod voluptatibus ullam odio earum aperiam ea non enim! Adipisci corrupti sint a libero eum?</p>
+
+    {{ range .Site.Data.states }}
+        <h1>{{.name}}</h1>
+    {{ end }}
+    
+    <p><a class="button" href="{{ .Site.BaseURL }}">Retour</a></p>
+{{ end }}
