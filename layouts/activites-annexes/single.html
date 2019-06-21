@@ -1,21 +1,21 @@
 {{ define "main" }}
     <h1>Enrichissez votre visite&nbsp;!</h1>
 
+    {{ range .Site.Data.activites }}
+        {{ partial "activite.html" . }}
+    {{ end }}
+
     <aside class="block-bg-medium">
         <h2>
             <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="8"></line></svg>
             Informations et réservations
         </h2>
-        <ul>
+        <ul style="margin-bottom:0">
             <li>04&nbsp;230&nbsp;70&nbsp;50</li>
             <li><a href="mailto:reservation@citemiroir.be">reservation@citemiroir.be</a></li>
             <li><a href="https://www.citemiroir.be">www.citemiroir.be</a></li>
         </ul> 
     </aside>
-
-    {{ range .Site.Data.activites }}
-        {{ partial "activite.html" . }}
-    {{ end }}
 
     <section class="single-footer" aria-label="Retour à la page d'accueil">
         <p><a class="button" href="{{ .Site.BaseURL }}">Retour</a></p>

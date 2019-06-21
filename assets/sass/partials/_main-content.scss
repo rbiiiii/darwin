@@ -31,6 +31,10 @@
         flex-direction: row;
         padding-bottom:$su*8;
 
+        &#intro {
+            padding-bottom:$su*4;
+        }
+
         &:nth-child(odd) {
 
             .home-section__content {
@@ -79,7 +83,7 @@
         padding:$su*3 $su*4 0 $su*3;
 
         #intro & {
-            margin: $su*5 $su*5 0 -380px;
+            margin: $su*3 $su*5 0 -380px;
             padding: $su*2;
             z-index: 5;
         }
@@ -148,11 +152,11 @@
     }
 
     &--tous-croyants {
-        margin-top:$su*2;
+        margin-top:$su*4;
         position: relative;
 
         @media screen and (min-width:1080px) {
-            margin-top:$su*2;
+            margin-top:$su*4;
         }
         
         h2 {
@@ -163,9 +167,9 @@
     .tous-croyants__img {
         display:none;
         position: absolute;
-        width: 130px;
-        right: -26px;
-        top: -48px;
+        width: 170px;
+        right: -25px;
+        top: -60px;
 
         @media screen and (min-width:1080px) {
             display:block;
@@ -226,7 +230,7 @@
     }
 }
 
-#reservation {
+#animations {
 
     @media screen and (min-width:1080px) {
 
@@ -296,8 +300,16 @@
     }  
 }
 
-.reservation__item {
+.animations__item {
     margin:$su*4 auto;
+
+    &--booking {
+
+        h3  {
+            display:flex;
+            align-items: center;
+        }
+    }
 
     @media screen and (max-width:1079px) {
 
@@ -310,7 +322,7 @@
             display: block;
         }
 
-        &:first-of-type:after, &:last-of-type:after {
+        &:last-of-type:after {
             display:none;
         }
 
@@ -350,7 +362,7 @@
     }
 }
 
-.reservation__item__list {  
+.animations__item__list {  
 
     li {
         display: flex;

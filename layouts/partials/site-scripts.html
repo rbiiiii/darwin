@@ -1,7 +1,6 @@
 {{ $contentLoaded := resources.Get "js/content-loaded.js" }}
 {{ $ieDetection := resources.Get "js/ie-detection.js" }}
-{{ $smoothScroll := resources.Get "js/smooth-scroll.js" }}
-{{ $defaultJS := slice $contentLoaded $ieDetection $smoothScroll | resources.Concat "js/global.js" }}
+{{ $defaultJS := slice $contentLoaded $ieDetection | resources.Concat "js/global.js" }}
 {{ $globalJS := $defaultJS | resources.Fingerprint }}
 <script src="{{ $globalJS.Permalink }}"></script>
 
@@ -9,7 +8,6 @@
     <style>
         body {
             overflow:auto;
-            scroll-behavior: smooth;
         }    
         .loader-wrapper {
             display:none;

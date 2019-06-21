@@ -2,8 +2,27 @@
 * FOOTER
 */
 
+.site-footer__copy-blocks {
+    display:flex;
+    flex-direction: column;
+
+    @media screen and (min-width:600px) {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    .site-footer__copy-block {
+        margin:0 0 $su/2 0;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}
+
 .site-footer__copy-block {
-    max-width:700px;
+    max-width:760px;
     z-index: 5;
     padding: 0 $su;
     text-align: center;
@@ -25,16 +44,82 @@
         }
     }
 
-    p {
-        font-size: 0.8rem;
-        margin-top:0;
+    &--fondation-cite-miroir {
+        display:flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width:100%;
+        max-width:100%;
+        margin:0 auto $su auto;
+        box-sizing: border-box;
 
-        @media screen and (min-width:1080px) {
-            font-size:1.2rem;
+        img {
+            display: block;
+            height: auto;
+            width: 100%;
+            max-width: 100%;
+
+            @media screen and (min-width:600px) {
+                width:auto;
+            }
         }
+    }
+}
+
+.site-footer__big-txt {
+    font-size: 1rem;
+    margin-top:0;
+
+    @media screen and (min-width:1080px) {
+        font-size:1.4rem;
     }
 }
 
 .site-footer__copy-img {
     max-width:100%;
+}
+
+.site-footer__list-logos {
+    display:inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin:$su*2 $su;
+    padding:0;
+    background:white;
+    
+    li {
+        background-color:white;
+        padding:$su/2 8px;
+        margin:0;
+        display:flex;
+        align-items: center;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+
+        &:hover, &:focus {
+            
+            img {
+                transform:scale(1.02);
+            }
+        }
+
+        &:active {
+            
+            img {
+                transform:scale(1);
+            }
+        }
+
+        img {
+            transition:transform 150ms ease-out;
+        }
+    }
+
+    img {
+        max-width:70px;
+        max-height: 70px;
+    }
 }

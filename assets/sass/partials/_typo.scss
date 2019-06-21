@@ -70,3 +70,7 @@ ul {
 .text-underline {
     text-decoration: underline;
 }
+
+strong {
+    @include ff-b;
+}
