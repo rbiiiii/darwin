@@ -1,4 +1,4 @@
-baseURL = "https://www.expodarwin.be"
+baseURL = "https://www.expodarwin.be/"
 languageCode = "fr-be"
 title = "Exposition Darwin, l'original"
 disableKinds = ["taxonomy", "taxonomyTerm"]
