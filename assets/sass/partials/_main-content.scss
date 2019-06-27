@@ -66,7 +66,6 @@
 .home-section__content {
     flex:2;
     @include block-mw;
-    padding:0 $su;
     position: relative;
     z-index:2;
 
