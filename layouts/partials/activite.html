@@ -3,7 +3,7 @@
         <picture class="event__img">
             <source type="image/webp" srcset="/assets/img/{{ .img }}-small.webp 768w, /assets/img/{{ .img }}.webp 4096w">
             <source type="image/jpeg" srcset="/assets/img/{{ .img }}-small.jpg 768w, /assets/img/{{ .img }}.jpg 4096w">
-            <img src="/assets/img/{{ .img }}-small.jpg" itemprop="image" alt="" width="768" height="512">
+            <img src="/assets/img/{{ .img }}-small.jpg" itemprop="image" alt="" width="768" height="512" sizes="100vw">
         </picture>
     {{ end }}
     <meta itemprop="startDate" content="{{ .Date }}">
