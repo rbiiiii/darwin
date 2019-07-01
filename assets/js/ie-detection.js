@@ -1,4 +1,4 @@
-// IE detection
+// DETECT IE
 
 var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
