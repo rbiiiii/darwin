@@ -2,21 +2,5 @@
 {{ $ieDetection := resources.Get "js/ie-detection.js" }}
 {{ $defaultJS := slice $contentLoaded $ieDetection | resources.Concat "js/global.js" }}
 {{ $globalJS := $defaultJS | resources.Fingerprint }}
+<script>document.querySelector('body').classList.remove('no-js');</script>
 <script src="{{ $globalJS.Permalink }}"></script>
-
-<noscript>
-    <style>
-        body {
-            overflow:auto;
-        }    
-        .loader-wrapper {
-            display:none;
-        }
-        .site-header__bg {
-            transform:scale(1);
-        }
-        .site-header__copy-img, .site-header__homme-img, .site-header__txt-img, .site-header__copy-top {
-            opacity:1;
-        }
-    </style>
-</noscript>

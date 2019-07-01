@@ -19,8 +19,25 @@
     <link rel="stylesheet" type="text/css" href="{{ $style.Permalink | relURL }}">
     {{ partial "site-favicon.html" . }}
     {{ partial "page-snippets.html" . }}
+    <style>
+      body.no-js {
+          overflow:auto;
+      }    
+      .no-js .loader-wrapper {
+          display:none;
+      }
+      .no-js .site-header__bg {
+          transform:scale(1);
+      }
+      .no-js .site-header__copy-img,
+      .no-js .site-header__homme-img,
+      .no-js .site-header__txt-img,
+      .no-js .site-header__copy-top {
+          opacity:1;
+      }
+    </style>
   </head>
-	<body id="root" class="{{ .Params.layout }}">
+	<body id="root" class="{{ .Params.layout }} no-js">
     <div class="site-wrapper">
       {{ block "header" . }}{{ partial "site-header.html" .}}{{ end }}
       <main class="site-main {{ if ne .IsHome true }}main-single{{ else }}main-home{{ end }}">{{ block "main" . }}{{ end }}</main>
