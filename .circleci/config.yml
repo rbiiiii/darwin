@@ -12,7 +12,9 @@ jobs:
       - checkout
       - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
       - checkout
+      - run: ssh -p 21 enprod@exx1135.exxoss.net
       - run: lftp sftp://${username}:'${password}'@${host} -e "cd enprod; mirror -v -R --exclude .git/ --exclude .circleci/ --exclude node_modules ./ ./; quit"
+
 
 workflows:
   version: 2
