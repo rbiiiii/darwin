@@ -1,6 +1,6 @@
 - title: La laïcité tacite de la science
   subtitle: <strong>Conférence</strong> de <strong>Guillaume Lecointre</strong>, commissaire de l’exposition <em>Darwin, l’original</em>
-  date: "2019-11-12T19:30:00.00+02:00"
+  start_date: "2019-11-12T19:30:00.00+02:00"
   date_for_humans: Le 12 novembre 2019 à 19h30
   place: à La Cité Miroir
   address: Place Xavier Neujean, 22 à 4000 Liège
@@ -11,7 +11,7 @@
 
 - title: Tout le monde descend
   subtitle: "<strong>Pièce de café-théâtre</strong> de <strong>Marie-Charlotte Morin</strong>. Production : Artenréel#1."
-  date: "2019-11-21T19:30:00.00+02:00"
+  start_date: "2019-11-21T19:30:00.00+02:00"
   date_for_humans: Le jeudi 21 novembre à 14h (scolaire) et à 19H30 (adultes)
   place: à La Cité Miroir
   address: Place Xavier Neujean, 22 à 4000 Liège
@@ -32,7 +32,7 @@
 
 - title: Science et croyance, éternels ennemis
   subtitle: "<strong>Rencontre</strong> avec <strong>Marcel Otte</strong>, docteur en Histoire de l’art et archéologie, <strong>Albert Moukheiber</strong>, docteur en neurosciences et psychologue clinicien"
-  date: "2019-11-26T09:00:00.00+02:00"
+  start_date: "2019-11-26T09:00:00.00+02:00"
   date_for_humans: Le 26 novembre 2019 à 9h
   place: à La Cité Miroir
   address: Place Xavier Neujean, 22 à 4000 Liège
