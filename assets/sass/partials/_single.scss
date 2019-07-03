@@ -132,7 +132,12 @@
                 }
 
                 img {
-                    flex:0 0 auto;
+                    flex:0 0 50px;
+                    height:auto;
+
+                    @media screen and (min-width:400px) {
+                        flex:0 0 90px;
+                    }
                 }
             }
 
