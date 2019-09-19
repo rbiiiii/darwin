@@ -49,5 +49,9 @@
             <img src="/assets/img/albert-moukheiber.jpg" alt="Portrait d'Albert Moukheiber" width="90" height="90">
             <figcaption><strong>Albert Moukheiber</strong>, docteur en neurosciences et psychologue clinicien, chargé de cours à l'Université Paris 8.</figcaption>
         </figure>
+        <figure class="activite__meta">
+            <img src="/assets/img/jean-leclercq.jpg" alt="Portrait de Jean leclercq" width="90" height="90">
+            <figcaption><strong>Jean Leclercq</strong>, diplômé en philologie romane (ULg), docteur en philosophie, professeur ordinaire à l’UCL et membre de l’Académie Royale de Belgique.</figcaption>
+        </figure>
     </div>
     

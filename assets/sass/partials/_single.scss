@@ -121,6 +121,7 @@
             margin-top:$su;
             flex-direction: column;
             justify-content: flex-start;
+            flex-wrap: wrap;
 
             .activite__meta {
                 max-width: 100%;
@@ -145,8 +146,7 @@
                 flex-direction: row;
 
                 .activite__meta {
-                    max-width:57%;
-                    margin:0;
+                    max-width:50%;
                 }
             }
         }
