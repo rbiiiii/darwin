@@ -81,6 +81,17 @@
     }
 }
 
+.site-footer__press {
+
+    a {
+        color:white;
+    
+        &:hover, &:focus {
+            color:$red;
+        }
+    }
+}
+
 .site-footer__big-txt {
     font-size: 1rem;
     max-width: 36em;
