@@ -15,4 +15,5 @@ Charlotte Collot
 ### Dossier de presse
 
 - FR : [Télécharger](/assets/pdf/darwin-l-original-dossier-de-presse-fr-cite-miroir.pdf)
+- NL : [Downloaden](/assets/pdf/darwin-l-original-persbericht-nl-cite-miroir.pdf)
 - EN : [Download](/assets/pdf/darwin-l-original-press-folder-en-cite-miroir.pdf)
