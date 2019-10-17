@@ -4,4 +4,4 @@ title = "Exposition Darwin, l'original"
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [params]
-    description = "La Cité Miroir à Liège accueillera une exposition consacrée à un personnage à la fois célèbre et méconnu, Charles Darwin, le père de la théorie de l’évolution. Au-delà du portrait de naturaliste, biologiste scientifique reconnu, se profile un humaniste, un anti-esclavagiste et un pionnier de l’éthologie animale et humaine, pour qui l’empathie et la collaboration étaient également le résultat de l’évolution."
+    description = "La Cité Miroir à Liège accueille une exposition consacrée à un personnage à la fois célèbre et méconnu, Charles Darwin, le père de la théorie de l’évolution. Au-delà du portrait de naturaliste, biologiste scientifique reconnu, se profile un humaniste, un anti-esclavagiste et un pionnier de l’éthologie animale et humaine, pour qui l’empathie et la collaboration étaient également le résultat de l’évolution."
